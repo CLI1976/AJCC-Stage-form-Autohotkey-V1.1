@@ -1,6 +1,6 @@
 ; Hepatocellular Carcinoma Imaging Report Generator
-; ä»¥ä¸‹è®Šæ•¸ç”¨æ–¼åœ¨fileappendçš„é–‹é ­çµæŸæ’å…¥ç©ºç™½ç”¨çš„
-; å¹³å¸¸è·³è¡Œ Y+20; æœ‰edit, text+25 edit+20 ; æ®µè½+30
+; ¥H¤UÅÜ¼Æ¥Î©ó¦bfileappendªº¶}ÀYµ²§ô´¡¤JªÅ¥Õ¥Îªº
+; ¥­±`¸õ¦æ Y+20; ¦³edit, text+25 edit+20 ; ¬q¸¨+30
 6_Space := "      "
 5_Space := "     "
 4_Space := "    "
@@ -25,26 +25,26 @@ Gui, Font, cDefault, Arial
 ; Gui, Add, Text,  Section vTitle, HCC Imaging Report
 
 ; ---------------Tumor Location and Size---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y15 x20, 1. Tumor location / Size
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vTLS y15 x200, Not assessable
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y35 x40, Number:
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vOne y60 x40, One
 Gui, Add, Checkbox, vTwo y60 x90, Two
 Gui, Add, Checkbox, vMultiple0 y60 x140, Multiple: 
 Gui, Add, Edit, vMultiple1 y55 x210 w30
-; ä½¿ç”¨åå¼•è™Ÿä¾†è½‰ç¾©åˆ†è™Ÿ
+; ¨Ï¥Î¤Ï¤Ş¸¹¨ÓÂà¸q¤À¸¹
 Gui, Add, Text, y115 x250, `;  
 Gui, Add, Checkbox, vInfiltrative y60 x260, Infiltrative or ill-defined lesions
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y80 x40, Location:
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vS1 y100 x40, S1
 Gui, Add, Checkbox, vS2 y100 x80, S2
 Gui, Add, Checkbox, vS3 y100 x120, S3
@@ -53,10 +53,10 @@ Gui, Add, Checkbox, vS5 y100 x200, S5
 Gui, Add, Checkbox, vS6 y100 x240, S6
 Gui, Add, Checkbox, vS7 y100 x280, S7
 Gui, Add, Checkbox, vS8 y100 x320, S8
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y120 x40, Size:
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y120 x84, (
 Gui, Add, Checkbox, vNonM y120 x90, Non-measurable)
 Gui, Add, Text, y145 x40, Measurable: 
@@ -67,17 +67,17 @@ Gui, Add, Checkbox, vT1b y185 x40, T1b & T2: tumor > 2cm, without/with micro-vas
 Gui, Add, Checkbox, vT2 y205 x40, T2: multiple tumors, <=5cm 
 Gui, Add, Checkbox, vT3 y225 x40, T3: multiple tumors, >5cm 
 ; ---------------Tumor Characteristics---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y255 x20, 2. Tumor Characteristics and Associated Liver Features
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y255 x440, (
 Gui, Add, Checkbox, vNonM1 y255 x445, Non-assessable)
 Gui, Add, Radio, vMTypical y275 x40, yes 
 Gui, Add, Radio, y275 x83, no
 Gui, Add, Radio,  y275 x120, equivocal: Typical enhancement pattern
 Gui, Add, Text, y275 x370, . 
-;ä¸æ‡‚ç‚ºä½•æ²’åŠ å€‹ä»€éº¼æ±è¥¿ä¸Šä¸‹å…©å€‹radioæœƒè¢«è¦–ç‚ºåŒä¸€çµ„å–®é¸è€ŒéŒ¯äº‚
+;¤£À´¬°¦ó¨S¥[­Ó¤°»òªF¦è¤W¤U¨â­Óradio·|³Qµø¬°¦P¤@²Õ³æ¿ï¦Ó¿ù¶Ã
 
 Gui, Add, Radio, vMportal y295 x40, yes 
 Gui, Add, Radio, y295 x83, no 
@@ -104,10 +104,10 @@ Gui, Add, Checkbox, vAscites y355 x120, Ascites
 Gui, Add, Checkbox, vPort y355 x195, Portosystemic collateral vessel
 
 ; ---------------Regional nodal metastasis---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y385 x20, 3. Regional nodal metastasis
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y385 x238, (
 Gui, Add, Checkbox, vRNon y385 x243, Non-measurable)
 Gui, Add, Checkbox, vNo y405 x40, No
@@ -124,10 +124,10 @@ Gui, Add, Checkbox, vYhe y445 x310, hepatoduodenal lig.
 Gui, Add, Checkbox, vYca y445 x448, caval
 
 ; ---------------Distant Metastasis---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y475 x20, 4. Distant metastasis
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y475 x165, (in this study)
 
 Gui, Add, Checkbox, vDM0 y495 x40, No
@@ -136,14 +136,14 @@ Gui, Add, Edit, vDM3 y515 x170 w250
 Gui, Add, Checkbox, vDM2 y545 x40, Yes, location: 
 Gui, Add, Edit, vDM4 y540 x140 w250
 ; ---------------Other Findings---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y575 x20, 5. Other findings
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Edit, vOF0 y595 x20 w500
 
 ; Buttons
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Button, Default gGenerateReport y640 x20, Generate Report
 Gui, Add, Button, gExit y640 x170, Exit
 
@@ -151,55 +151,56 @@ Gui, Add, Button, gExit y640 x170, Exit
 Gui, Show, w600 h700, Hepatocellular Carcinoma Imaging Report Generator
 return
 
-; === ç”Ÿæˆå ±å‘Š===
+; === ¥Í¦¨³ø§i===
 GenerateReport:
     ; Collect data from GUI
     Gui, Submit, NoHide
-     ; åˆªé™¤ç¾æœ‰çš„ test.txt æ–‡ä»¶
+     ; §R°£²{¦³ªº test.txt ¤å¥ó
     FileDelete, c:\temp\test.txt
-    ; å°‡çµæœé€è¡Œè¼¸å…¥test.txtä¸­
-FileAppend,  Addtional report for cancer staging  `n, c:\temp\test.txt   
+    ; ±Nµ²ªG³v¦æ¿é¤Jtest.txt¤¤
+FormatTime, CurrentDate,, yyyy/MM/dd
+FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©   
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Hepatocellular Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
-    FileAppend,    `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
-    FileAppend, *æœ¬è¡¨å–®åƒ…ä¾æ“šå–®æ¬¡å½±åƒé€²è¡Œåˆ†æœŸä¾›è…«ç˜¤åœ˜éšŠåƒè€ƒï¼Œä¸¦ä¸ä»£è¡¨ç—…äººçš„è‡¨åºŠåˆ†æœŸï¼Œè‡¨åºŠåˆ†æœŸéœ€ç¶œåˆç—…äººè‡¨åºŠç™¼ç¾ã€å„ç¨®å½±åƒ(åŒ…æ‹¬å„ç¨®å…§è¦–é¡åŠè¶…éŸ³æ³¢æª¢æŸ¥)åŠç—…ç†è¡¨ç¾ä¾†é€²è¡Œåˆ¤æ–·ï¼Œç—…äººçš„æœ€çµ‚è‡¨åºŠåˆ†æœŸå¯èƒ½å› ç™Œç—‡åœ˜éšŠè¨è«–æœ‰æ‰€ç•°å‹•ï¼Œæ•¬è«‹åƒé–±ç—…æ­·é¦–é ã€‚ `n, c:\temp\test.txt
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,    `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
+    FileAppend, *¥»ªí³æ¶È¨Ì¾Ú³æ¦¸¼v¹³¶i¦æ¤À´Á¨Ñ¸~½F¹Î¶¤°Ñ¦Ò¡A¨Ã¤£¥Nªí¯f¤HªºÁ{§É¤À´Á¡AÁ{§É¤À´Á»İºî¦X¯f¤HÁ{§Éµo²{¡B¦UºØ¼v¹³(¥]¬A¦UºØ¤ºµøÃè¤Î¶W­µªiÀË¬d)¤Î¯f²zªí²{¨Ó¶i¦æ§PÂ_¡A¯f¤Hªº³Ì²×Á{§É¤À´Á¥i¯à¦]Àù¯g¹Î¶¤°Q½×¦³©Ò²§°Ê¡A·q½Ğ°Ñ¾\¯f¾ú­º­¶¡C `n, c:\temp\test.txt
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
  
-;--------------ç¬¬äºŒæ®µ-----------------------------------------------
+;--------------²Ä¤G¬q-----------------------------------------------
     FileAppend,  1. %1_Space%Tumor location / Size ( , c:\temp\test.txt  
 if TLS = 1
  {
-   FileAppend,  â–  Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  ¡½ Not assessable)  `n, c:\temp\test.txt
 }
   if TLS = 0
  {
-   FileAppend,  â–¡ Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Not assessable)  `n, c:\temp\test.txt
 }
     FileAppend, %4_Space%Number:  `n, c:\temp\test.txt
 if One = 1
  {
-   FileAppend,  %4_Space%â–  one %1_Space%, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ one %1_Space%, c:\temp\test.txt
 }
   if One = 0
  {
-   FileAppend,  %6_Space%â–¡ one %1_Space%, c:\temp\test.txt
+   FileAppend,  %6_Space%¡¼ one %1_Space%, c:\temp\test.txt
 }
 if Two = 1
  {
-   FileAppend,  â–  two %1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ two %1_Space%, c:\temp\test.txt
 }
   if Two = 0
  {
-   FileAppend,  â–¡ two %1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ two %1_Space%, c:\temp\test.txt
 }
 if Multiple0 = 1
  {
-   FileAppend,  â–  Multiple: %1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Multiple: %1_Space%, c:\temp\test.txt
 }
   if Multiple0 = 0
  {
-   FileAppend,  â–¡ Multiple: %1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Multiple: %1_Space%, c:\temp\test.txt
 }
     FileAppend,__%Multiple1%__%1_Space%, c:\temp\test.txt
     FileAppend, 
@@ -209,513 +210,513 @@ if Multiple0 = 1
 
 if Infiltrative = 1
  {
-   FileAppend,  â–  Infiltrative or ill-defined lesions %1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Infiltrative or ill-defined lesions %1_Space%, c:\temp\test.txt
 }
   if Infiltrative = 0
  {
-   FileAppend,  â–¡ Infiltrative or ill-defined lesions %1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Infiltrative or ill-defined lesions %1_Space%, c:\temp\test.txt
 }
-   FileAppend,  %1_Space% `n, c:\temp\test.txt   ; è·³è¡Œ
+   FileAppend,  %1_Space% `n, c:\temp\test.txt   ; ¸õ¦æ
    FileAppend, %4_Space%Location:  `n, c:\temp\test.txt
 if S1 = 1
  {
-   FileAppend,  %6_Space%â–  S1 %2_Space%, c:\temp\test.txt
+   FileAppend,  %6_Space%¡½ S1 %2_Space%, c:\temp\test.txt
 }
   if S1 = 0
  {
-   FileAppend,  %6_Space%â–¡ S1 %2_Space%, c:\temp\test.txt
+   FileAppend,  %6_Space%¡¼ S1 %2_Space%, c:\temp\test.txt
 }
 if S2 = 1
  {
-   FileAppend,  â–  S2 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ S2 %2_Space%, c:\temp\test.txt
 }
   if S2 = 0
  {
-   FileAppend,  â–¡ S2 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ S2 %2_Space%, c:\temp\test.txt
 }
 if S3 = 1
  {
-   FileAppend,  â–  S3 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ S3 %2_Space%, c:\temp\test.txt
 }
   if S3 = 0
  {
-   FileAppend,  â–¡ S3 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ S3 %2_Space%, c:\temp\test.txt
 }
 if S4 = 1
  {
-   FileAppend,  â–  S4 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ S4 %2_Space%, c:\temp\test.txt
 }
   if S4 = 0
  {
-   FileAppend,  â–¡ S4 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ S4 %2_Space%, c:\temp\test.txt
 }
 if S5 = 1
  {
-   FileAppend,  â–  S5 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ S5 %2_Space%, c:\temp\test.txt
 }
   if S5 = 0
  {
-   FileAppend,  â–¡ S5 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ S5 %2_Space%, c:\temp\test.txt
 }
 if S6 = 1
  {
-   FileAppend,  â–  S6 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ S6 %2_Space%, c:\temp\test.txt
 }
   if S6 = 0
  {
-   FileAppend,  â–¡ S6 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ S6 %2_Space%, c:\temp\test.txt
 }
 if S7 = 1
  {
-   FileAppend,  â–  S7 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ S7 %2_Space%, c:\temp\test.txt
 }
   if S7 = 0
  {
-   FileAppend,  â–¡ S7 %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ S7 %2_Space%, c:\temp\test.txt
 }
 if S8 = 1
  {
-   FileAppend,  â–  S8 %2_Space%`n, c:\temp\test.txt
+   FileAppend,  ¡½ S8 %2_Space%`n, c:\temp\test.txt
 }
   if S8 = 0
  {
-   FileAppend,  â–¡ S8 %2_Space%`n, c:\temp\test.txt
+   FileAppend,  ¡¼ S8 %2_Space%`n, c:\temp\test.txt
 }
  FileAppend, %4_Space%Size: ( , c:\temp\test.txt  
 if NonM = 1
  {
-   FileAppend,  â–  Non-measurable)  `n, c:\temp\test.txt
+   FileAppend,  ¡½ Non-measurable)  `n, c:\temp\test.txt
 }
   if NonM = 0
  {
-   FileAppend,  â–¡ Non-measurable) `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Non-measurable) `n, c:\temp\test.txt
 }
     FileAppend,  %6_Space%Measurable:_%Meas%_cm (the greatest tumor)`n, c:\temp\test.txt  
 if T1a = 1
  {
-   FileAppend,  %6_Space%â–  T1a: solitary tumor <= 2cm  `n, c:\temp\test.txt
+   FileAppend,  %6_Space%¡½ T1a: solitary tumor <= 2cm  `n, c:\temp\test.txt
 }
   if T1a = 0
  {
-   FileAppend,  %6_Space%â–¡ T1a: solitary tumor <= 2cm `n, c:\temp\test.txt
+   FileAppend,  %6_Space%¡¼ T1a: solitary tumor <= 2cm `n, c:\temp\test.txt
 }
 if T1b = 1
  {
    FileAppend, 
 ( 
-%6_Space%â–  T1b & T2: tumor > 2cm, without/with micro-vascular invasion  
+%6_Space%¡½ T1b & T2: tumor > 2cm, without/with micro-vascular invasion  
 )`n, c:\temp\test.txt
 }
   if T1b = 0
  {
    FileAppend,  
 (
-%6_Space%â–¡ T1b & T2: tumor > 2cm, without/with micro-vascular invasion
+%6_Space%¡¼ T1b & T2: tumor > 2cm, without/with micro-vascular invasion
 )`n, c:\temp\test.txt
 }
 if T2 = 1
  {
    FileAppend,  
 (
-%6_Space%â–  T2: multiple tumors, <=5cm 
+%6_Space%¡½ T2: multiple tumors, <=5cm 
 )`n, c:\temp\test.txt
 }
   if T2 = 0
  {
    FileAppend,  
 (
-%6_Space%â–¡ T2: multiple tumors, <=5cm 
+%6_Space%¡¼ T2: multiple tumors, <=5cm 
 )`n, c:\temp\test.txt
 }
 if T3 = 1
  {
    FileAppend,  
 (
-%6_Space%â–  T3: multiple tumors, >5cm 
+%6_Space%¡½ T3: multiple tumors, >5cm 
 )`n, c:\temp\test.txt
 }
   if T3 = 0
  {
    FileAppend,
 (
-%6_Space%â–¡ T3: multiple tumors, >5cm 
+%6_Space%¡¼ T3: multiple tumors, >5cm 
 )`n, c:\temp\test.txt
 }
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬ä¸‰æ®µ-----------------------------------------------
+;--------------²Ä¤T¬q-----------------------------------------------
 FileAppend,  2. %1_Space%Tumor Characteristics and Associated Liver Features( , c:\temp\test.txt  
 if NonM1= 1
  {
-   FileAppend,  â–  Non-assessable) %1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡½ Non-assessable) %1_Space% `n, c:\temp\test.txt
 }
   if NonM1= 0
  {
-   FileAppend,  â–¡ Non-assessable)%1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Non-assessable)%1_Space% `n, c:\temp\test.txt
 }
 If (MTypical = 1)
 {
-    FileAppend,  %4_Space%â–  yes â–¡ no â–¡ equivocal: Typical enhancement pattern `n, c:\temp\test.txt
+    FileAppend,  %4_Space%¡½ yes ¡¼ no ¡¼ equivocal: Typical enhancement pattern `n, c:\temp\test.txt
 }
 Else If (MTypical = 2)
 {
-    FileAppend,  %4_Space%â–¡ yes â–  no â–¡ equivocal: Typical enhancement pattern `n, c:\temp\test.txt
+    FileAppend,  %4_Space%¡¼ yes ¡½ no ¡¼ equivocal: Typical enhancement pattern `n, c:\temp\test.txt
 }
 Else If (MTypical = 3)
 {
-    FileAppend,  %4_Space%â–¡ yes â–¡ no â–  equivocal: Typical enhancement pattern `n, c:\temp\test.txt
+    FileAppend,  %4_Space%¡¼ yes ¡¼ no ¡½ equivocal: Typical enhancement pattern `n, c:\temp\test.txt
 }
 Else If (MTypical = 0)
 {
-    FileAppend,  %4_Space%â–¡ yes â–¡ no â–¡ equivocal: Typical enhancement pattern `n, c:\temp\test.txt
+    FileAppend,  %4_Space%¡¼ yes ¡¼ no ¡¼ equivocal: Typical enhancement pattern `n, c:\temp\test.txt
 }
 If (Mportal=1) 
 {
     FileAppend,  
 (
-%4_Space%â–  yes â–¡ no â–¡ equivocal: Major portal vein, location:%1_Space%
+%4_Space%¡½ yes ¡¼ no ¡¼ equivocal: Major portal vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 Else If (Mportal=2) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–  no â–¡ equivocal: Major portal vein, location:%1_Space%
+%4_Space%¡¼ yes ¡½ no ¡¼ equivocal: Major portal vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 Else If (Mportal=3) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–¡ no â–  equivocal: Major portal vein, location:%1_Space%
+%4_Space%¡¼ yes ¡¼ no ¡½ equivocal: Major portal vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 Else If (Mportal=0) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–¡ no â–¡ equivocal: Major portal vein, location:%1_Space%
+%4_Space%¡¼ yes ¡¼ no ¡¼ equivocal: Major portal vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 if MPright= 1
  {
-   FileAppend,  â–  Right%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Right%1_Space%, c:\temp\test.txt
 }
   if MPright= 0
  {
-   FileAppend,  â–¡ Right%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Right%1_Space%, c:\temp\test.txt
 }
 if MPleft= 1
  {
-   FileAppend,  â–  Left%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Left%1_Space%, c:\temp\test.txt
 }
   if MPleft= 0
  {
-   FileAppend,  â–¡ Left%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Left%1_Space%, c:\temp\test.txt
 }
 if MPmain= 1
  {
-   FileAppend,  â–  Main%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Main%1_Space%, c:\temp\test.txt
 }
   if MPmain= 0
  {
-   FileAppend,  â–¡ Main%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Main%1_Space%, c:\temp\test.txt
 }
 if MPSMV= 1
  {
-   FileAppend,  â–  SMV(T4)`n, c:\temp\test.txt
+   FileAppend,  ¡½ SMV(T4)`n, c:\temp\test.txt
 }
   if MPSMV= 0
  {
-   FileAppend,  â–¡ SMV(T4)`n, c:\temp\test.txt
+   FileAppend,  ¡¼ SMV(T4)`n, c:\temp\test.txt
 }
 If (Mhepatic=1) 
 {
     FileAppend,
 (
-%4_Space%â–  yes â–¡ no â–¡ equivocal: Major hepatic vein, location:%1_Space%
+%4_Space%¡½ yes ¡¼ no ¡¼ equivocal: Major hepatic vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 Else If (Mhepatic=2) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–  no â–¡ equivocal: Major hepatic vein, location:%1_Space%
+%4_Space%¡¼ yes ¡½ no ¡¼ equivocal: Major hepatic vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 Else If (Mhepatic=3) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–¡ no â–  equivocal: Major hepatic vein, location:%1_Space%
+%4_Space%¡¼ yes ¡¼ no ¡½ equivocal: Major hepatic vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 Else If (Mhepatic=0) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–¡ no â–¡ equivocal: Major hepatic vein, location:%1_Space%
+%4_Space%¡¼ yes ¡¼ no ¡¼ equivocal: Major hepatic vein, location:%1_Space%
 ), c:\temp\test.txt
 }
 if HPright= 1
  {
-   FileAppend,  â–  Right%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Right%1_Space%, c:\temp\test.txt
 }
   if HPright= 0
  {
-   FileAppend,  â–¡ Right%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Right%1_Space%, c:\temp\test.txt
 }
 if HPmid= 1
  {
-   FileAppend,  â–  Middle%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Middle%1_Space%, c:\temp\test.txt
 }
   if HPmid= 0
  {
-   FileAppend,  â–¡ Middle%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Middle%1_Space%, c:\temp\test.txt
 }
 if HPleft= 1
  {
-   FileAppend,  â–  Left%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Left%1_Space%, c:\temp\test.txt
 }
   if HPleft= 0
  {
-   FileAppend,  â–¡ Left%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Left%1_Space%, c:\temp\test.txt
 }
 if HPIVC= 1
  {
-   FileAppend,  â–  IVC(T4)`n, c:\temp\test.txt
+   FileAppend,  ¡½ IVC(T4)`n, c:\temp\test.txt
 }
   if HPIVC= 0
  {
-   FileAppend,  â–¡ IVC(T4)`n, c:\temp\test.txt
+   FileAppend,  ¡¼ IVC(T4)`n, c:\temp\test.txt
 }
 If (Extra=1) 
 {
     FileAppend,
 (
-%4_Space%â–  yes â–¡ no â–¡ equivocal: Extra-hepatic spread(T4)`n
+%4_Space%¡½ yes ¡¼ no ¡¼ equivocal: Extra-hepatic spread(T4)`n
 ), c:\temp\test.txt
 }
 Else If (Extra=2) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–  no â–¡ equivocal: Extra-hepatic spread(T4)`n
+%4_Space%¡¼ yes ¡½ no ¡¼ equivocal: Extra-hepatic spread(T4)`n
 ), c:\temp\test.txt
 }
 Else If (Extra=3) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–¡ no â–  equivocal: Extra-hepatic spread(T4)`n
+%4_Space%¡¼ yes ¡¼ no ¡½ equivocal: Extra-hepatic spread(T4)`n
 ), c:\temp\test.txt
 }
 Else If (Extra=0) 
 {
     FileAppend,
 (
-%4_Space%â–¡ yes â–¡ no â–¡ equivocal: Extra-hepatic spread(T4)`n
+%4_Space%¡¼ yes ¡¼ no ¡¼ equivocal: Extra-hepatic spread(T4)`n
 ), c:\temp\test.txt
 }
 if Cirrhosis= 1
  {
-   FileAppend,  %4_Space%â–  Cirrhosis %3_Space%, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Cirrhosis %3_Space%, c:\temp\test.txt
 }
   if Cirrhosis= 0
  {
-   FileAppend,  %4_Space%â–¡ Cirrhosis %3_Space%, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Cirrhosis %3_Space%, c:\temp\test.txt
 }
 if Ascites= 1
  {
-   FileAppend,  â–  Ascites %3_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Ascites %3_Space%, c:\temp\test.txt
 }
   if Ascites= 0
  {
-   FileAppend,  â–¡ Ascites %3_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Ascites %3_Space%, c:\temp\test.txt
 }
 if Port= 1
  {
-   FileAppend,  â–  Portosystemic collateral vessel `n, c:\temp\test.txt
+   FileAppend,  ¡½ Portosystemic collateral vessel `n, c:\temp\test.txt
 }
   if Port= 0
  {
-   FileAppend,  â–¡ Portosystemic collateral vessel `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Portosystemic collateral vessel `n, c:\temp\test.txt
 }
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬å››æ®µ-----------------------------------------------
+;--------------²Ä¥|¬q-----------------------------------------------
 
 FileAppend,  3. %1_Space%Regional node metastasis%2_Space%(, c:\temp\test.txt  
 if RNon= 1
  {
-   FileAppend,  â–  Non-measurable) `n, c:\temp\test.txt
+   FileAppend,  ¡½ Non-measurable) `n, c:\temp\test.txt
 }
   if RNon= 0
  {
-   FileAppend,  â–¡ Non-measurable) `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Non-measurable) `n, c:\temp\test.txt
 }
 if No= 1
  {
-   FileAppend,  %4_Space%â–  No `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No `n, c:\temp\test.txt
 }
   if No= 0
  {
-   FileAppend,  %4_Space%â–¡ No `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No `n, c:\temp\test.txt
 }
 if Nequ= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Equivocal, location:%1_Space%
+%4_Space%¡½ Equivocal, location:%1_Space%
 ), c:\temp\test.txt
 }
   if Nequ= 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Equivocal, location:%1_Space%
+%4_Space%¡¼ Equivocal, location:%1_Space%
 ), c:\temp\test.txt
 }
 if Nhi= 1
  {
    FileAppend,  
 (
-â–  hilar  %2_Space%
+¡½ hilar  %2_Space%
 ), c:\temp\test.txt
 }
   if Nhi= 0
  {
    FileAppend,  
 (
-â–¡ hilar  %2_Space%
+¡¼ hilar  %2_Space%
 ), c:\temp\test.txt
 }
 if Nin= 1
  {
    FileAppend,  
 (
-â–  inf. phrenic  %2_Space%
+¡½ inf. phrenic  %2_Space%
 ), c:\temp\test.txt
 }
   if Nin= 0
  {
    FileAppend,  
 (
-â–¡ inf. phrenic  %2_Space%
+¡¼ inf. phrenic  %2_Space%
 ), c:\temp\test.txt
 }
 if Nhe= 1
  {
    FileAppend,  
 (
-â–  hepatoduodenal lig. %2_Space%
+¡½ hepatoduodenal lig. %2_Space%
 ), c:\temp\test.txt
 }
   if Nhe= 0
  {
    FileAppend,  
 (
-â–¡ hepatoduodenal lig. %2_Space%
+¡¼ hepatoduodenal lig. %2_Space%
 ), c:\temp\test.txt
 }
 if Nca= 1
  {
-   FileAppend, â–  caval `n, c:\temp\test.txt
+   FileAppend, ¡½ caval `n, c:\temp\test.txt
 }
   if Nca= 0
  {
-   FileAppend,  â–¡ caval `n, c:\temp\test.txt
+   FileAppend,  ¡¼ caval `n, c:\temp\test.txt
 }
 if Nyes= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Yes, location:%6_Space%%5_Space%%1_Space%
+%4_Space%¡½ Yes, location:%6_Space%%5_Space%%1_Space%
 ), c:\temp\test.txt
 }
   if Nyes= 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Yes, location:%6_Space%%5_Space%%1_Space%
+%4_Space%¡¼ Yes, location:%6_Space%%5_Space%%1_Space%
 ), c:\temp\test.txt
 }
 if Yhi= 1
  {
    FileAppend,  
 (
-â–  hilar  %2_Space%
+¡½ hilar  %2_Space%
 ), c:\temp\test.txt
 }
   if Yhi= 0
  {
    FileAppend,  
 (
-â–¡ hilar  %2_Space%
+¡¼ hilar  %2_Space%
 ), c:\temp\test.txt
 }
 if Yin= 1
  {
    FileAppend,  
 (
-â–  inf. phrenic  %2_Space%
+¡½ inf. phrenic  %2_Space%
 ), c:\temp\test.txt
 }
   if Yin= 0
  {
    FileAppend,  
 (
-â–¡ inf. phrenic  %2_Space%
+¡¼ inf. phrenic  %2_Space%
 ), c:\temp\test.txt
 }
 if Yhe= 1
  {
    FileAppend,  
 (
-â–  hepatoduodenal lig. %2_Space%
+¡½ hepatoduodenal lig. %2_Space%
 ), c:\temp\test.txt
 }
   if Yhe= 0
  {
    FileAppend,  
 (
-â–¡ hepatoduodenal lig. %2_Space%
+¡¼ hepatoduodenal lig. %2_Space%
 ), c:\temp\test.txt
 }
 if Yca= 1
  {
-   FileAppend, â–  caval `n, c:\temp\test.txt
+   FileAppend, ¡½ caval `n, c:\temp\test.txt
 }
   if Yca= 0
  {
-   FileAppend,  â–¡ caval `n, c:\temp\test.txt
+   FileAppend,  ¡¼ caval `n, c:\temp\test.txt
 }
-FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬äº”æ®µ-----------------------------------------------
+;--------------²Ä¤­¬q-----------------------------------------------
 
    FileAppend,  4. %1_Space%Distant metastasis(in this study)`n, c:\temp\test.txt  
 if DM0= 1
  {
-   FileAppend,  %4_Space%â–  No %1_Space%, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No %1_Space%, c:\temp\test.txt
 }
   if DM0 = 0
  {
-   FileAppend,  %4_Space%â–¡ No %1_Space%, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No %1_Space%, c:\temp\test.txt
 }
-    FileAppend,  `n, c:\temp\test.txt  ;è·³è¡Œ
+    FileAppend,  `n, c:\temp\test.txt  ;¸õ¦æ
 if DM1= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Equivocal, location: %1_Space%__%DM3%__
+%4_Space%¡½ Equivocal, location: %1_Space%__%DM3%__
 ), c:\temp\test.txt
 }
   if DM1 = 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Equivocal, location:  _____%DM3%______
+%4_Space%¡¼ Equivocal, location:  _____%DM3%______
 ), c:\temp\test.txt
 }
     FileAppend,   %2_Space%`n, c:\temp\test.txt 
@@ -723,23 +724,23 @@ if DM2= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Yes, location: %1_Space%__%DM4%__
+%4_Space%¡½ Yes, location: %1_Space%__%DM4%__
 )`n, c:\temp\test.txt
 }
   if DM2 = 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Yes, location:  _____%DM4%______
+%4_Space%¡¼ Yes, location:  _____%DM4%______
 )`n, c:\temp\test.txt
 }
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
     FileAppend,  5. %1_Space%Other findings: `n, c:\temp\test.txt 
     FileAppend,  %4_Space%______%OF0%________ `n, c:\temp\test.txt 
 ; ==================================
    FileRead, ClipboardContent, c:\temp\test.txt
-    ; å°‡å…§å®¹è¤‡è£½åˆ°å‰ªè²¼ç°¿
+    ; ±N¤º®e½Æ»s¨ì°Å¶KÃ¯
     Clipboard := ClipboardContent
     MsgBox, %Clipboard%
 return

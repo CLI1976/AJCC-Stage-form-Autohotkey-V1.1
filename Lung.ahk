@@ -1,5 +1,5 @@
 ; Lung cancer Imaging Report Generator
-; ä»¥ä¸‹è®Šæ•¸ç”¨æ–¼åœ¨fileappendçš„é–‹é ­çµæŸæ’å…¥ç©ºç™½ç”¨çš„
+; ¥H¤UÅÜ¼Æ¥Î©ó¦bfileappendªº¶}ÀYµ²§ô´¡¤JªÅ¥Õ¥Îªº
 6_Space := "      "
 5_Space := "     "
 4_Space := "    "
@@ -21,17 +21,17 @@ Gui, Color, 85ddda
 Gui, Font, cDefault, Arial
 
 ; ---------------Tumor Location and Size---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y15 x20, Tumor location / Size
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y18 x183, (
 Gui, Add, Checkbox, vTLS y18 x190, Not assessable)
 
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y35 x40, Location:
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vRUL y38 x120, RUL
 Gui, Add, Checkbox, vRML y38 x170, RML
 Gui, Add, Checkbox, vRLL y38 x220, RLL
@@ -39,19 +39,19 @@ Gui, Add, Checkbox, vLUL y38 x270, LUL
 Gui, Add, Checkbox, vLLL y38 x320, LLL
 Gui, Add, Checkbox, vOther y38 x370, Other:
 Gui, Add, Edit, vOther1 y32 x430 w80
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y55 x40, Size:
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vNonM y58 x90, Non-measurable
 Gui, Add, Checkbox, vMeas1 y58 x220, Measurable: 
 Gui, Add, Edit, vMeas y52 x315 w60
 Gui, Add, Text, y58 x383, cm(greatest dimension)
 ; ---------------Tumor invasion---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y80 x20, Tumor Invasion
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y82 x140, (
 Gui, Add, Checkbox, vNonM1 y82 x145, Not assessable)
 Gui, Add, Checkbox, vNoE y100 x40, No or Equivocal 
@@ -92,10 +92,10 @@ Gui, Add, Checkbox, vT4j y500 x345, vertebral body
 Gui, Add, Checkbox, vT4k y500 x455, carina
 Gui, Add, Checkbox, vT4l y520 x60, Separate tumor nodule(s) in a different lobe of the ipsilateral lung
 ; ---------------Regional nodal metastasis---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y545 x20, Regional nodal metastasis
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vNo y565 x40, No
 Gui, Add, Checkbox, vNequ y585 x40, Equivocal, location: 
 Gui, Add, Checkbox, vNip y605 x60, Ipilateral peribronchieal LNs
@@ -121,26 +121,26 @@ Gui, Add, Checkbox, vNysc y745 x435, Supraclavicular LNs
 Gui, Add, Checkbox, vNyis y765 x85, Ipsilateral or contralateral scalene
 
 ; ---------------Distant Metastasis---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y790 x20, Distant metastasis
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y792 x165, (in this study)
 Gui, Add, Checkbox, vDM0 y810 x40, No
 Gui, Add, Checkbox, vDM1 y830 x40, Yes or Equivocal: 
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y850 x40, Thoracic
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vMT1 y870 x60, Yes
 Gui, Add, Checkbox, vMT2 y870 x105, equivocal: Separate tumor nodule(s) in a contralateral lobe(M1a)
 Gui, Add, Checkbox, vMT3 y890 x60, Yes
 Gui, Add, Checkbox, vMT4 y890 x105, equivocal: Pleural nodules or malignant pleural or pericardial effusion(M1a)
 
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y910 x40, Extrathoracic
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vME1 y930 x60, Yes
 Gui, Add, Checkbox, vME2 y930 x105, equivocal: Singal lesions(M1b), Location: 
 Gui, Add, Edit, vME5 y925 x365 w140
@@ -149,498 +149,499 @@ Gui, Add, Checkbox, vME4 y960 x105, equivocal: Multiple lesions(M1c), Location:
 Gui, Add, Edit, vME6 y955 x375 w130
 
 ; ---------------Other Findings---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y980 x20, Other findings
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Edit, vOF0 y1000 x20 w500
 
 ; Buttons
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Button, Default gGenerateReport y1050 x20, Generate Report
 Gui, Add, Button, gExit y1050 x170, Exit
 
 ; Show GUI
-Gui, Show, w600 h1100, Lung Cancer Imaging Report Generator
+Gui, Show, w600 h1100 x0 y0, Lung Cancer Imaging Report Generator
 return
 
-; === ç”Ÿæˆå ±å‘Š===
+; === ¥Í¦¨³ø§i===
 GenerateReport:
     ; Collect data from GUI
     Gui, Submit, NoHide
-     ; åˆªé™¤ç¾æœ‰çš„ test.txt æ–‡ä»¶
+     ; §R°£²{¦³ªº test.txt ¤å¥ó
     FileDelete, c:\temp\test.txt
-    ; å°‡çµæœé€è¡Œè¼¸å…¥test.txtä¸­
-FileAppend,  Addtional report for cancer staging  `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    ; ±Nµ²ªG³v¦æ¿é¤Jtest.txt¤¤
+FormatTime, CurrentDate,, yyyy/MM/dd
+FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Lung Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
-    FileAppend,    `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
-    FileAppend, *æœ¬è¡¨å–®åƒ…ä¾æ“šå–®æ¬¡å½±åƒé€²è¡Œåˆ†æœŸä¾›è…«ç˜¤åœ˜éšŠåƒè€ƒï¼Œä¸¦ä¸ä»£è¡¨ç—…äººçš„è‡¨åºŠåˆ†æœŸï¼Œè‡¨åºŠåˆ†æœŸéœ€ç¶œåˆç—…äººè‡¨åºŠç™¼ç¾ã€å„ç¨®å½±åƒ(åŒ…æ‹¬å„ç¨®å…§è¦–é¡åŠè¶…éŸ³æ³¢æª¢æŸ¥)åŠç—…ç†è¡¨ç¾ä¾†é€²è¡Œåˆ¤æ–·ï¼Œç—…äººçš„æœ€çµ‚è‡¨åºŠåˆ†æœŸå¯èƒ½å› ç™Œç—‡åœ˜éšŠè¨è«–æœ‰æ‰€ç•°å‹•ï¼Œæ•¬è«‹åƒé–±ç—…æ­·é¦–é ã€‚`n, c:\temp\test.txt
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,    `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
+    FileAppend, *¥»ªí³æ¶È¨Ì¾Ú³æ¦¸¼v¹³¶i¦æ¤À´Á¨Ñ¸~½F¹Î¶¤°Ñ¦Ò¡A¨Ã¤£¥Nªí¯f¤HªºÁ{§É¤À´Á¡AÁ{§É¤À´Á»İºî¦X¯f¤HÁ{§Éµo²{¡B¦UºØ¼v¹³(¥]¬A¦UºØ¤ºµøÃè¤Î¶W­µªiÀË¬d)¤Î¯f²zªí²{¨Ó¶i¦æ§PÂ_¡A¯f¤Hªº³Ì²×Á{§É¤À´Á¥i¯à¦]Àù¯g¹Î¶¤°Q½×¦³©Ò²§°Ê¡A·q½Ğ°Ñ¾\¯f¾ú­º­¶¡C`n, c:\temp\test.txt
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
 
-;--------------ç¬¬äºŒæ®µ-----------------------------------------------
+;--------------²Ä¤G¬q-----------------------------------------------
     FileAppend,  1. %1_Space%Tumor location / Size ( , c:\temp\test.txt  
 if TLS = 1
  {
-   FileAppend,  â–  Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  ¡½ Not assessable)  `n, c:\temp\test.txt
 }
   if TLS = 0
  {
-   FileAppend,  â–¡ Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Not assessable)  `n, c:\temp\test.txt
 }
     FileAppend, %4_Space%Location:  , c:\temp\test.txt
 if RUL = 1
  {
-   FileAppend,  %1_Space%â–  RUL %2_Space%, c:\temp\test.txt
+   FileAppend,  %1_Space%¡½ RUL %2_Space%, c:\temp\test.txt
 }
   if RUL = 0
  {
-   FileAppend,  %1_Space%â–¡ RUL %2_Space%, c:\temp\test.txt
+   FileAppend,  %1_Space%¡¼ RUL %2_Space%, c:\temp\test.txt
 }
 if RML = 1
  {
-   FileAppend,  â–  RML %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ RML %2_Space%, c:\temp\test.txt
 }
   if RML = 0
  {
-   FileAppend,  â–¡ RML %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ RML %2_Space%, c:\temp\test.txt
 }
 if RLL = 1
  {
-   FileAppend,  â–  RLL %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ RLL %2_Space%, c:\temp\test.txt
 }
   if RLL = 0
  {
-   FileAppend,  â–¡ RLL %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ RLL %2_Space%, c:\temp\test.txt
 }
 if LUL = 1
  {
-   FileAppend,  â–  LUL %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ LUL %2_Space%, c:\temp\test.txt
 }
   if LUL = 0
  {
-   FileAppend,  â–¡ LUL %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ LUL %2_Space%, c:\temp\test.txt
 }  
 if LLL = 1
  {
-   FileAppend,  â–  LLL %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ LLL %2_Space%, c:\temp\test.txt
 }
   if LLL = 0
  {
-   FileAppend,  â–¡ LLL %2_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ LLL %2_Space%, c:\temp\test.txt
 }  
 if Other = 1
  {
-   FileAppend,  â–  Other:%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡½ Other:%1_Space%, c:\temp\test.txt
 }
   if Other = 0
  {
-   FileAppend,  â–¡ Other:%1_Space%, c:\temp\test.txt
+   FileAppend,  ¡¼ Other:%1_Space%, c:\temp\test.txt
 }  
 
   FileAppend,__%Other1%__ `n, c:\temp\test.txt
    FileAppend, %4_Space%Size:  , c:\temp\test.txt
 if NonM = 1
  {
-   FileAppend,  %1_Space%â–  Non-measurable %2_Space%, c:\temp\test.txt
+   FileAppend,  %1_Space%¡½ Non-measurable %2_Space%, c:\temp\test.txt
 }
   if NonM = 0
  {
-   FileAppend,  %1_Space%â–¡ Non-measurable %2_Space%, c:\temp\test.txt
+   FileAppend,  %1_Space%¡¼ Non-measurable %2_Space%, c:\temp\test.txt
 }
 if Meas1 = 1
  {
-   FileAppend,  %1_Space%â–  Measurable: %1_Space%, c:\temp\test.txt
+   FileAppend,  %1_Space%¡½ Measurable: %1_Space%, c:\temp\test.txt
 }
   if Meas1 = 0
  {
-   FileAppend,  %1_Space%â–¡ Measurable: %1_Space%, c:\temp\test.txt
+   FileAppend,  %1_Space%¡¼ Measurable: %1_Space%, c:\temp\test.txt
 }
   FileAppend,__%Meas%__ cm(greatest dimension)`n, c:\temp\test.txt
-FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
     
-;--------------ç¬¬ä¸‰æ®µ-----------------------------------------------
+;--------------²Ä¤T¬q-----------------------------------------------
 FileAppend,  2. %1_Space%Tumor invasion( , c:\temp\test.txt  
 if NonM1= 1
  {
-   FileAppend,  â–  Not assessable) %1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡½ Not assessable) %1_Space% `n, c:\temp\test.txt
 }
   if NonM1= 0
  {
-   FileAppend,  â–¡ Not assessable)%1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Not assessable)%1_Space% `n, c:\temp\test.txt
 }
 If NoE= 1
  {
-   FileAppend,  %4_Space%â–  No or Equivocal `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No or Equivocal `n , c:\temp\test.txt
 }
   if NoE= 0
  {
-   FileAppend,  %4_Space%â–¡ No or Equivocal `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No or Equivocal `n , c:\temp\test.txt
 }
 If Yes= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Yes, if yes:  `n
+%4_Space%¡½ Yes, if yes:  `n
 ), c:\temp\test.txt
 }
   if yes= 0
  {
    FileAppend, 
 (
- %4_Space%â–¡ Yes, if yes: `n
+ %4_Space%¡¼ Yes, if yes: `n
 ) , c:\temp\test.txt
 }
    FileAppend,  %4_Space%T1 `n , c:\temp\test.txt
    FileAppend,  %4_Space%%4_Space%Tumor<=3cm: `n , c:\temp\test.txt
 If T1a= 1
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–  Tumor <=1cm(T1a) , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡½ Tumor <=1cm(T1a) , c:\temp\test.txt
 }
   if T1a= 0
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–¡ Tumor <=1cm(T1a) , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡¼ Tumor <=1cm(T1a) , c:\temp\test.txt
 }
 If T1b= 1
  {
-   FileAppend,  %2_Space%â–  1cm<Tumor <=2cm(T1b) , c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ 1cm<Tumor <=2cm(T1b) , c:\temp\test.txt
 }
   if T1b= 0
  {
-   FileAppend,  %2_Space%â–¡ 1cm<Tumor <=2cm(T1b) , c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ 1cm<Tumor <=2cm(T1b) , c:\temp\test.txt
 }
 If T1c= 1
  {
-   FileAppend,  %2_Space%â–  2cm<Tumor <=3cm(T1c)`n , c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ 2cm<Tumor <=3cm(T1c)`n , c:\temp\test.txt
 }
   if T1c= 0
  {
-   FileAppend,  %2_Space%â–¡ 2cm<Tumor <=3cm(T1c)`n , c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ 2cm<Tumor <=3cm(T1c)`n , c:\temp\test.txt
 }
 
 If T1d= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Surrounded by lung or visceral pleura , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Surrounded by lung or visceral pleura , c:\temp\test.txt
 }
   if T1d= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Surrounded by lung or visceral pleura , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Surrounded by lung or visceral pleura , c:\temp\test.txt
 }
 If T13= 1
  {
-   FileAppend,  %4_Space%â–  Not more proximal than lobar bronchus `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Not more proximal than lobar bronchus `n , c:\temp\test.txt
 }
   if T13= 0
  {
-   FileAppend,  %4_Space%â–¡ Not more proximal than lobar bronchus `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Not more proximal than lobar bronchus `n , c:\temp\test.txt
 }
    FileAppend,  %4_Space%T2 `n , c:\temp\test.txt
    FileAppend,  %4_Space%%4_Space%3cm<Tumor <= 5cm: `n , c:\temp\test.txt
 If T2a= 1
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–  3cm<Tumor <=4cm(T2a) , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡½ 3cm<Tumor <=4cm(T2a) , c:\temp\test.txt
 }
   if T2a= 0
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–¡ 3cm<Tumor <=4cm(T2a) , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡¼ 3cm<Tumor <=4cm(T2a) , c:\temp\test.txt
 }
 If T2b= 1
  {
-   FileAppend,  %4_Space%â–  4cm<Tumor <=5cm(T2b) `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ 4cm<Tumor <=5cm(T2b) `n , c:\temp\test.txt
 }
   if T2b= 0
  {
-   FileAppend,  %4_Space%â–¡ 4cm<Tumor <=5cm(T2b) `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ 4cm<Tumor <=5cm(T2b) `n , c:\temp\test.txt
 }
 If T2c= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  involves the main bronchus , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ involves the main bronchus , c:\temp\test.txt
 }
   if T2c= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ involves the main bronchus , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ involves the main bronchus , c:\temp\test.txt
 }
 If T2d= 1
  {
-   FileAppend,  %4_Space%â–  invades visceral pleura `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ invades visceral pleura `n , c:\temp\test.txt
 }
   if T2d= 0
  {
-   FileAppend,  %4_Space%â–¡ invades visceral pleura `n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ invades visceral pleura `n , c:\temp\test.txt
 }
 If T2e= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Atelectasis or obstructive pneumonitis to hilum (focal or total) `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Atelectasis or obstructive pneumonitis to hilum (focal or total) `n , c:\temp\test.txt
 }
   if T2e= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Atelectasis or obstructive pneumonitis to hilum (focal or total) `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Atelectasis or obstructive pneumonitis to hilum (focal or total) `n , c:\temp\test.txt
 }
    FileAppend,  %4_Space%T3 `n , c:\temp\test.txt
 If T3a= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  5cm<Tumor <=7cm `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ 5cm<Tumor <=7cm `n, c:\temp\test.txt
 }
   if T3a= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ 5cm<Tumor <=7cm `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ 5cm<Tumor <=7cm `n , c:\temp\test.txt
 }
 If T3b= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Invasion of  `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Invasion of  `n , c:\temp\test.txt
 }
   if T3b= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Invasion of  `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Invasion of  `n , c:\temp\test.txt
 }
 If T3c= 1
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–  parietal pleura , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡½ parietal pleura , c:\temp\test.txt
 }
   if T3c= 0
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–¡ parietal pleura , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡¼ parietal pleura , c:\temp\test.txt
 }
 If T3d= 1
  {
-   FileAppend,  %4_Space%â–  chest wall , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ chest wall , c:\temp\test.txt
 }
   if T3d= 0
  {
-   FileAppend,  %4_Space%â–¡ chest wall , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ chest wall , c:\temp\test.txt
 }
 If T3e= 1
  {
-   FileAppend,  %4_Space%â–  phrenic nerve , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ phrenic nerve , c:\temp\test.txt
 }
   if T3e= 0
  {
-   FileAppend,  %4_Space%â–¡ phrenic nerve , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ phrenic nerve , c:\temp\test.txt
 }
 If T3f= 1
  {
-   FileAppend,  %4_Space%â–  parietal pericardium`n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ parietal pericardium`n , c:\temp\test.txt
 }
   if T3f= 0
  {
-   FileAppend,  %4_Space%â–¡ parietal pericardium`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ parietal pericardium`n, c:\temp\test.txt
 }
 If T3g= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Separate tumor nodule(s) in same lobe `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Separate tumor nodule(s) in same lobe `n , c:\temp\test.txt
 }
   if T3g= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Separate tumor nodule(s) in same lobe `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Separate tumor nodule(s) in same lobe `n, c:\temp\test.txt
 }
 
    FileAppend,  %4_Space%T4 `n , c:\temp\test.txt
 If T4a= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Tumor >7cm `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Tumor >7cm `n, c:\temp\test.txt
 }
   if T4a= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Tumor >7cm `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Tumor >7cm `n , c:\temp\test.txt
 }
 If T4b= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Invasion of  `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Invasion of  `n , c:\temp\test.txt
 }
   if T4b= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Invasion of  `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Invasion of  `n , c:\temp\test.txt
 }
 If T4c= 1
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–  diaphragm , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡½ diaphragm , c:\temp\test.txt
 }
   if T4c= 0
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–¡ diaphragm , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡¼ diaphragm , c:\temp\test.txt
 }
 If T4d= 1
  {
-   FileAppend,  %4_Space%â–  mediastinum , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ mediastinum , c:\temp\test.txt
 }
   if T4d= 0
  {
-   FileAppend,  %4_Space%â–¡ mediastinum , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ mediastinum , c:\temp\test.txt
 }
 If T4e= 1
  {
-   FileAppend,  %4_Space%â–  heart , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ heart , c:\temp\test.txt
 }
   if T4e= 0
  {
-   FileAppend,  %4_Space%â–¡ heart , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ heart , c:\temp\test.txt
 }
 If T4f= 1
  {
-   FileAppend,  %4_Space%â–  great vessels , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ great vessels , c:\temp\test.txt
 }
   if T4f= 0
  {
-   FileAppend,  %4_Space%â–¡ great vessels, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ great vessels, c:\temp\test.txt
 }
 If T4g= 1
  {
-   FileAppend,  %4_Space%â–  trachea`n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ trachea`n , c:\temp\test.txt
 }
   if T4g= 0
  {
-   FileAppend,  %4_Space%â–¡ trachea`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ trachea`n, c:\temp\test.txt
 }
 If T4h= 1
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–  recurrent laryngeal nerve , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡½ recurrent laryngeal nerve , c:\temp\test.txt
 }
   if T4h= 0
  {
-   FileAppend,  %4_Space%%4_Space%%2_Space%â–¡ recurrent laryngeal nerve , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%2_Space%¡¼ recurrent laryngeal nerve , c:\temp\test.txt
 }
 If T4i= 1
  {
-   FileAppend,  %4_Space%â–  esophagus , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ esophagus , c:\temp\test.txt
 }
   if T4i= 0
  {
-   FileAppend,  %4_Space%â–¡ esophagus , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ esophagus , c:\temp\test.txt
 }
 If T4j= 1
  {
-   FileAppend,  %4_Space%â–  vertebral body , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ vertebral body , c:\temp\test.txt
 }
   if T4j= 0
  {
-   FileAppend,  %4_Space%â–¡ vertebral body, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ vertebral body, c:\temp\test.txt
 }
 If T4k= 1
  {
-   FileAppend,  %4_Space%â–  carina`n , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ carina`n , c:\temp\test.txt
 }
   if T4k= 0
  {
-   FileAppend,  %4_Space%â–¡ carina`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ carina`n, c:\temp\test.txt
 }
 If T4l= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Separate tumor nodule(s) in a different lobe of the ipsilateral lung`n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Separate tumor nodule(s) in a different lobe of the ipsilateral lung`n , c:\temp\test.txt
 }
   if T4l= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Separate tumor nodule(s) in a different lobe of the ipsilateral lung`n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Separate tumor nodule(s) in a different lobe of the ipsilateral lung`n , c:\temp\test.txt
 }
-FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
-;--------------ç¬¬å››æ®µ-----------------------------------------------
+FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
+;--------------²Ä¥|¬q-----------------------------------------------
 
 FileAppend,  3. %1_Space%Regional node metastasis%2_Space%`n, c:\temp\test.txt  
 if No= 1
  {
-   FileAppend,  %4_Space%â–  No `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No `n, c:\temp\test.txt
 }
   if No= 0
  {
-   FileAppend,  %4_Space%â–¡ No `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No `n, c:\temp\test.txt
 }
 if Nequ= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Equivocal, location: `n
+%4_Space%¡½ Equivocal, location: `n
 ), c:\temp\test.txt
 }
   if Nequ= 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Equivocal, location: `n
+%4_Space%¡¼ Equivocal, location: `n
 ), c:\temp\test.txt
 }
 if Nip= 1
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–  Ipilateral peribronchieal LNs
+%4_Space%%4_Space%¡½ Ipilateral peribronchieal LNs
 ), c:\temp\test.txt
 }
   if Nip= 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–¡ Ipilateral peribronchieal LNs
+%4_Space%%4_Space%¡¼ Ipilateral peribronchieal LNs
 ), c:\temp\test.txt
 }
 if Nih= 1
  {
-   FileAppend,  %4_Space%â–  Ipsilateral hilar LNS, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Ipsilateral hilar LNS, c:\temp\test.txt
 }
   if Nih= 0
  {
-   FileAppend,  %4_Space%â–¡ Ipsilateral hilar LNS, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Ipsilateral hilar LNS, c:\temp\test.txt
 }
 if Nipu= 1
  {
-   FileAppend,  %4_Space%â–  Intrapulmonary Nodes`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Intrapulmonary Nodes`n, c:\temp\test.txt
 }
   if Nipu= 0
  {
-   FileAppend,  %4_Space%â–¡ Intrapulmonary Nodes`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Intrapulmonary Nodes`n, c:\temp\test.txt
 }
 if Nsub= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
 }
   if Nsub= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
 }
 if Nch= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Contralateral hilar LNs, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Contralateral hilar LNs, c:\temp\test.txt
 }
   if Nch= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Contralateral hilar LNs, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Contralateral hilar LNs, c:\temp\test.txt
 }
 if Ncm= 1
  {
-   FileAppend,  %4_Space%â–  Contrallateral mediastinal LNs , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Contrallateral mediastinal LNs , c:\temp\test.txt
 }
   if Ncm= 0
  {
-   FileAppend,  %4_Space%â–¡ Contrallateral mediastinal LNs , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Contrallateral mediastinal LNs , c:\temp\test.txt
 }
 if Nsc= 1
  {
-   FileAppend,  %4_Space%â–  Supraclavicular LNs`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Supraclavicular LNs`n, c:\temp\test.txt
 }
   if Nsc= 0
  {
-   FileAppend,  %4_Space%â–¡ Supraclavicular LNs`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Supraclavicular LNs`n, c:\temp\test.txt
 }
 if Nis= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Ipsilateral or contralateral scalene`n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Ipsilateral or contralateral scalene`n, c:\temp\test.txt
 }
   if Nis= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Ipsilateral or contralateral scalene`n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Ipsilateral or contralateral scalene`n, c:\temp\test.txt
 }
 
 if Nyes= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Yes, location: `n
+%4_Space%¡½ Yes, location: `n
 ), c:\temp\test.txt
 }
   if Nyes= 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Yes, location: `n
+%4_Space%¡¼ Yes, location: `n
 ), c:\temp\test.txt
 }
 
@@ -650,193 +651,193 @@ if Nyip= 1
  {
    FileAppend,  
 (
-%2_Space%â–  Ipilateral peribronchieal LNs
+%2_Space%¡½ Ipilateral peribronchieal LNs
 ), c:\temp\test.txt
 }
   if Nyip= 0
  {
    FileAppend,  
 (
-%2_Space%â–¡ Ipilateral peribronchieal LNs
+%2_Space%¡¼ Ipilateral peribronchieal LNs
 ), c:\temp\test.txt
 }
 if Nyih= 1
  {
-   FileAppend,  %4_Space%â–  Ipsilateral hilar LNS, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Ipsilateral hilar LNS, c:\temp\test.txt
 }
   if Nyih= 0
  {
-   FileAppend,  %4_Space%â–¡ Ipsilateral hilar LNS, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Ipsilateral hilar LNS, c:\temp\test.txt
 }
 if Nyipu= 1
  {
-   FileAppend,  %4_Space%â–  Intrapulmonary Nodes`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Intrapulmonary Nodes`n, c:\temp\test.txt
 }
   if Nyipu= 0
  {
-   FileAppend,  %4_Space%â–¡ Intrapulmonary Nodes`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Intrapulmonary Nodes`n, c:\temp\test.txt
 }
 
 
 FileAppend,  %4_Space%%4_Space%N2:, c:\temp\test.txt
 if Nysub= 1
  {
-   FileAppend,  %2_Space%â–  Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
 }
   if Nysub= 0
  {
-   FileAppend,  %2_Space%â–¡ Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ Ipsilateral mediastinal and/or subcarinal LNs`n, c:\temp\test.txt
 }
 
 
 FileAppend,  %4_Space%%4_Space%N3:, c:\temp\test.txt
 if Nych= 1
  {
-   FileAppend,  %2_Space%â–  Contralateral hilar LNs, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Contralateral hilar LNs, c:\temp\test.txt
 }
   if Nych= 0
  {
-   FileAppend,  %2_Space%â–¡ Contralateral hilar LNs, c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ Contralateral hilar LNs, c:\temp\test.txt
 }
 if Nycm= 1
  {
-   FileAppend,  %4_Space%â–  Contrallateral mediastinal LNs , c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Contrallateral mediastinal LNs , c:\temp\test.txt
 }
   if Nycm= 0
  {
-   FileAppend,  %4_Space%â–¡ Contrallateral mediastinal LNs , c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Contrallateral mediastinal LNs , c:\temp\test.txt
 }
 if Nysc= 1
  {
-   FileAppend,  %4_Space%â–  Supraclavicular LNs`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Supraclavicular LNs`n, c:\temp\test.txt
 }
   if Nysc= 0
  {
-   FileAppend,  %4_Space%â–¡ Supraclavicular LNs`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Supraclavicular LNs`n, c:\temp\test.txt
 }
 if Nyis= 1
  {
-   FileAppend, %4_Space%%4_Space%%4_Space%%4_Space%â–  Ipsilateral or contralateral scalene`n, c:\temp\test.txt
+   FileAppend, %4_Space%%4_Space%%4_Space%%4_Space%¡½ Ipsilateral or contralateral scalene`n, c:\temp\test.txt
 }
   if Nyis= 0
  {
-   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%â–¡ Ipsilateral or contralateral scalene`n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%¡¼ Ipsilateral or contralateral scalene`n, c:\temp\test.txt
 }
 
-FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬äº”æ®µ--Distant metastasis---------------------------------------------
+;--------------²Ä¤­¬q--Distant metastasis---------------------------------------------
 
    FileAppend,  4. %1_Space%Distant metastasis(in this study)`n, c:\temp\test.txt  
 if DM0= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  No %1_Space%`n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ No %1_Space%`n, c:\temp\test.txt
 }
   if DM0 = 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ No %1_Space%`n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ No %1_Space%`n, c:\temp\test.txt
 }
 if DM1= 1
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–  Yes or Equivocal:`n
+%4_Space%%4_Space%¡½ Yes or Equivocal:`n
 ), c:\temp\test.txt
 }
   if DM1 = 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–¡ Yes or Equivocal: `n
+%4_Space%%4_Space%¡¼ Yes or Equivocal: `n
 ), c:\temp\test.txt
 }
 FileAppend,   %4_Space%%4_Space%Thoracic:`n, c:\temp\test.txt 
 if MT1= 1
  {
-   FileAppend,  %2_Space%%4_Space%%4_Space%â–  Yes, c:\temp\test.txt
+   FileAppend,  %2_Space%%4_Space%%4_Space%¡½ Yes, c:\temp\test.txt
 }
   if MT1 = 0
  {
-    FileAppend,  %2_Space%%4_Space%%4_Space%â–¡ Yes, c:\temp\test.txt
+    FileAppend,  %2_Space%%4_Space%%4_Space%¡¼ Yes, c:\temp\test.txt
 }
 if MT2= 1
  {
-   FileAppend,  %2_Space%â–  equivocal: Separate tumor nodule(s) in a contralateral lobe(M1a)`n, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ equivocal: Separate tumor nodule(s) in a contralateral lobe(M1a)`n, c:\temp\test.txt
 }
   if MT2 = 0
  {
-    FileAppend,  %2_Space%â–¡ equivocal: Separate tumor nodule(s) in a contralateral lobe(M1a)`n, c:\temp\test.txt
+    FileAppend,  %2_Space%¡¼ equivocal: Separate tumor nodule(s) in a contralateral lobe(M1a)`n, c:\temp\test.txt
 }
 if MT3= 1
  {
-   FileAppend,  %2_Space%%4_Space%%4_Space%â–  Yes, c:\temp\test.txt
+   FileAppend,  %2_Space%%4_Space%%4_Space%¡½ Yes, c:\temp\test.txt
 }
   if MT3 = 0
  {
-    FileAppend,  %2_Space%%4_Space%%4_Space%â–¡ Yes, c:\temp\test.txt
+    FileAppend,  %2_Space%%4_Space%%4_Space%¡¼ Yes, c:\temp\test.txt
 }
 if MT4= 1
  {
-   FileAppend,  %2_Space%â–  equivocal: Pleural nodules or malignant pleural or pericardial effusion(M1a)`n, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ equivocal: Pleural nodules or malignant pleural or pericardial effusion(M1a)`n, c:\temp\test.txt
 }
   if MT4 = 0
  {
-    FileAppend,  %2_Space%â–¡ equivocal: Pleural nodules or malignant pleural or pericardial effusion(M1a)`n, c:\temp\test.txt
+    FileAppend,  %2_Space%¡¼ equivocal: Pleural nodules or malignant pleural or pericardial effusion(M1a)`n, c:\temp\test.txt
 }
 
 FileAppend,   %4_Space%%4_Space%Extra-thoracic:`n, c:\temp\test.txt 
 if ME1= 1
  {
-   FileAppend,  %2_Space%%4_Space%%4_Space%â–  Yes, c:\temp\test.txt
+   FileAppend,  %2_Space%%4_Space%%4_Space%¡½ Yes, c:\temp\test.txt
 }
   if ME1 = 0
  {
-    FileAppend,  %2_Space%%4_Space%%4_Space%â–¡ Yes, c:\temp\test.txt
+    FileAppend,  %2_Space%%4_Space%%4_Space%¡¼ Yes, c:\temp\test.txt
 }
 if ME2= 1
  {
    FileAppend,  
 (
-%2_Space%â–  equivocal: Singal lesions(M1b), Location: _%ME5%_
+%2_Space%¡½ equivocal: Singal lesions(M1b), Location: _%ME5%_
 )`n, c:\temp\test.txt
 }
   if ME2 = 0
  {
     FileAppend,  
 (
-%2_Space%â–¡ equivocal: Singal lesions(M1b), Location: _%ME5%_
+%2_Space%¡¼ equivocal: Singal lesions(M1b), Location: _%ME5%_
 )`n, c:\temp\test.txt
 }
 if ME3= 1
  {
-   FileAppend,  %2_Space%%4_Space%%4_Space%â–  Yes, c:\temp\test.txt
+   FileAppend,  %2_Space%%4_Space%%4_Space%¡½ Yes, c:\temp\test.txt
 }
   if ME3 = 0
  {
-    FileAppend,  %2_Space%%4_Space%%4_Space%â–¡ Yes, c:\temp\test.txt
+    FileAppend,  %2_Space%%4_Space%%4_Space%¡¼ Yes, c:\temp\test.txt
 }
 if ME4= 1
  {
    FileAppend,  
 (
-%2_Space%â–  equivocal: Multiple lesions(M1c), Location: _%ME6%_
+%2_Space%¡½ equivocal: Multiple lesions(M1c), Location: _%ME6%_
 )`n, c:\temp\test.txt
 }
   if ME4 = 0
  {
     FileAppend,  
 (
-%2_Space%â–¡ equivocal: Multiple lesions(M1c), Location: _%ME6%_
+%2_Space%¡¼ equivocal: Multiple lesions(M1c), Location: _%ME6%_
 )`n, c:\temp\test.txt
 }
 
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
     FileAppend,  5. %1_Space%Other findings: `n, c:\temp\test.txt 
     FileAppend,  %4_Space%%4_Space%_%OF0%_ `n, c:\temp\test.txt 
 ; ==================================
    FileRead, ClipboardContent, c:\temp\test.txt
-    ; å°‡å…§å®¹è¤‡è£½åˆ°å‰ªè²¼ç°¿
+    ; ±N¤º®e½Æ»s¨ì°Å¶KÃ¯
     Clipboard := ClipboardContent
     MsgBox, %Clipboard%
 return

@@ -1,4 +1,4 @@
-; Oropharynx Carcinoma Imaging Report Generator
+; Oral Cavity Carcinoma Imaging Report Generator
 ; 以下變數用於在fileappend的開頭結束插入空白用的
 ; 平常跳行 Y+20; 有edit, text+25 edit+20 ; 段落+30
 6_Space := "      "
@@ -29,109 +29,117 @@ Gui, Font, s10, Arial   ; 恢復
 Gui, Add, Text, y15 x197, (
 Gui, Add, Checkbox, vL1 y15 x203, Not assessable)
 Gui, Add, Checkbox, vL2 y35 x40, No evidence of primary tumor.
-Gui, Add, Text, y55 x40, Location: 
-Gui, Add, Checkbox, vL3 y55 x105, Base of the tongue
-Gui, Add, Checkbox, vL4 y55 x240, Tonsillar fossa
-Gui, Add, Checkbox, vL5 y55 x360, Soft palate
-Gui, Add, Checkbox, vL6 y80 x105, Oropharyngeal walls
-Gui, Add, Checkbox, vL7 y80 x253, Others: 
- Gui, Add, Edit, vL8 y75 x320 w120
- Gui, Add, Text, y105 x40, Size: 
- Gui, Add, Checkbox, vL9 y105 x80, Non-measurable
- Gui, Add, Checkbox, vL10 y105 x205, Measurable: 
- Gui, Add, Edit, vL11 y100 x300 w40
- Gui, Add, Text, y105 x348, cm(largest diameter)
+Gui, Add, Text, y55 x40, Laterality: 
+Gui, Add, Checkbox, vL3 y55 x105, Left
+Gui, Add, Checkbox, vL4 y55 x151, Right 
+Gui, Add, Checkbox, vL5 y55 x205, Bilateral
+Gui, Add, Text, y75 x40, Location: 
+Gui, Add, Checkbox, vL6 y75 x105, Upper Lip
+Gui, Add, Checkbox, vL7 y75 x205, Lower Lip
+Gui, Add, Checkbox, vL8 y75 x305, Oral tongue 
+Gui, Add, Checkbox, vL9 y95 x105, Upper gingivobuccal mucosa
+Gui, Add, Checkbox, vL10 y95 x305, Lower gingivobuccal mucosa
+Gui, Add, Checkbox, vL11 y115 x105, Hard palate
+Gui, Add, Checkbox, vL12 y115 x205, Mouth floor
+Gui, Add, Checkbox, vL13 y115 x305, Retromolar trigone  
+Gui, Add, Checkbox, vL14 y140 x105, Others: 
+ Gui, Add, Edit, vL15 y135 x175 w120
+ Gui, Add, Text, y170 x40, Size: 
+ Gui, Add, Checkbox, vL16 y170 x80, Non-measurable
+ Gui, Add, Checkbox, vL17 y170 x205, Measurable: 
+ Gui, Add, Edit, vL18 y165 x300 w40
+ Gui, Add, Text, y170 x348, cm(largest diameter)
 
 ; ---------------Tumor Invastion---------------
  Gui, Font, s12 bold, Arial   ; 改大改粗體
- Gui, Add, Text, y135 x20, 2. Tumor invasion
+ Gui, Add, Text, y200 x20, 2. Tumor invasion
  Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
  Gui, Font, s10, Arial   ; 恢復
- Gui, Add, Text, y135 x161, (
- Gui, Add, Checkbox, vT1 y135 x168, Not assessable)
- Gui, Add, Checkbox, vT2 y155 x40, T0: No regional invasion.
- Gui, Add, Checkbox, vT3 y175 x40, T1: <= 2 cm in greatest dimension.
- Gui, Add, Checkbox, vT4 y195 x40, T2: > 2 cm but <= 4 cm in greatest dimension.
- Gui, Add, Checkbox, vT5 y215 x40, T3: > 4 cm in greatest dimension.
-Gui, Add, Checkbox, vT6 y235 x40, T3: Extension to lingual surface of epiglottis.
- Gui, Add, Checkbox, vT7 y255 x40, T4a: Moderately advanced local disease. Tumor invades:
- Gui, Add, Checkbox, vT8 y275 x60, Larynx
- Gui, Add, Checkbox, vT9 y275 x155, Extrinsic muscle of tongue 
- Gui, Add, Checkbox, vT10 y275 x333, Medial pterygoid muscle
- Gui, Add, Checkbox, vT11 y295 x60, Hard palate
- Gui, Add, Checkbox, vT12 y295 x155, Mandible
-  Gui, Add, Checkbox, vT13 y315 x40, T4b: Very advanced local disease. Tumor invades:
- Gui, Add, Checkbox, vT14 y335 x60, Lateral pterygoid muscle
- Gui, Add, Checkbox, vT15 y335 x228, Pterygoid plates
- Gui, Add, Checkbox, vT16 y335 x352, Lateral nasopharynx
- Gui, Add, Checkbox, vT17 y360 x60, Skull base
-Gui, Add, Checkbox, vT18 y360 x150, Encasement of carotid artery
- Gui, Add, Checkbox, vT19 y360 x340, Others: 
- Gui, Add, Edit, vT20 y355 x405 w200
+ Gui, Add, Text, y200 x161, (
+ Gui, Add, Checkbox, vT1 y200 x168, Not assessable)
+ Gui, Add, Checkbox, vT2 y220 x40, T0: No regional invasion.
+ Gui, Add, Checkbox, vT3 y240 x40, T1: <= 2 cm in greatest dimension.
+ Gui, Add, Checkbox, vT4 y260 x40, T2: > 2 cm but <= 4 cm in greatest dimension.
+ Gui, Add, Checkbox, vT5 y280 x40, T3: > 4 cm in greatest dimension.
+ Gui, Add, Checkbox, vT6 y300 x40, T4a: Moderately advanced local disease. Tumor invades:
+ Gui, Add, Checkbox, vT7 y320 x60, Lip tumor:
+ Gui, Add, Checkbox, vT8 y320 x145, Through cortical bone
+ Gui, Add, Checkbox, vT9 y320 x300, Inferior alveolar nerve
+ Gui, Add, Checkbox, vT10 y340 x145, Floor of mouth
+ Gui, Add, Checkbox, vT11 y340 x300, Skin of face
+ Gui, Add, Checkbox, vT12 y360 x60, Oral cavity:
+ Gui, Add, Checkbox, vT13 y360 x145, Through cortical bone (mandible or maxilla) 
+ Gui, Add, Checkbox, vT14 y380 x145, Maxillary sinus
+ Gui, Add, Checkbox, vT15 y380 x300, Skin of face
+ Gui, Add, Checkbox, vT16 y400 x40, T4b: Very advanced local disease. Tumor invades:
+ Gui, Add, Checkbox, vT17 y420 x60, Masticator space
+ Gui, Add, Checkbox, vT18 y420 x188, Pterygoid plates
+ Gui, Add, Checkbox, vT19 y420 x305, Skull base
+ Gui, Add, Checkbox, vT20 y445 x60, Encase internal carotid artery
+ Gui, Add, Checkbox, vT21 y445 x260, Others: 
+ Gui, Add, Edit, vT22 y440 x335 w200
 
 ; ---------------Regional nodal metastasis---------------
   Gui, Font, s12 bold, Arial   ; 改大改粗體
-  Gui, Add, Text, y390 x20, 3. Regional nodal metastasis
+  Gui, Add, Text, y475 x20, 3. Regional nodal metastasis
   Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
   Gui, Font, s10, Arial   ; 恢復
- Gui, Add, Text, y390 x245, (
-  Gui, Add, Checkbox, vNot y390 x253, Not assessable)
- Gui, Add, Checkbox, vNo y410 x40, No regional nodal metastasis.
- Gui, Add, Checkbox, vYes y430 x40, Yes. If yes, involved lymph nodes:
- Gui, Add, Checkbox, vY1 y450 x60, N1: Single ipsilateral lymph node <= 3 cm in greatest dimension and ENE(-).
- Gui, Add, Checkbox, vY2 y470 x60, N2a: Single ipsilateral lymph node > 3 cm, <= 6 cm in greatest dimension and ENE(-).
- Gui, Add, Checkbox, vY3 y490 x60, N2b: Multiple ipsilateral lymph nodes, <= 6 cm in greatest dimension and ENE(-).
-Gui, Add, Checkbox, vY4 y510 x60, N2c: Bilateral or contralateral lymph nodes, <= 6 cm in greatest dimension and ENE(-)
-Gui, Add, Checkbox, vY5 y530 x60, N3a: Metastasis in a lymph node > 6 cm in greatest dimension and ENE(-).
-Gui, Add, Checkbox, vY6 y550 x60, N3b: Metastasis in any node(s) and clinically overt ENE(+).
-  Gui, Add, Text, y575 x60, Maximal size of the largest positive node: 
- Gui, Add, Edit, vY7 y570 x308 w60
-  Gui, Add, Text, y575 x369, mm (long axis)
-Gui, Add, Text, y595 x60, Location: Left level:
- Gui, Add, Checkbox, vY8 y595 x180, I
- Gui, Add, Checkbox, vY9 y595 x220, II
- Gui, Add, Checkbox, vY10 y595 x260, III
- Gui, Add, Checkbox, vY11 y595 x300, IV
- Gui, Add, Checkbox, vY12 y595 x340, V
- Gui, Add, Checkbox, vY13 y595 x380, VI
- Gui, Add, Checkbox, vY14 y595 x420, VII
-Gui, Add, Text, y615 x108, Right level:
- Gui, Add, Checkbox, vY15 y615 x180, I
- Gui, Add, Checkbox, vY16 y615 x220, II
- Gui, Add, Checkbox, vY17 y615 x260, III
- Gui, Add, Checkbox, vY18 y615 x300, IV
- Gui, Add, Checkbox, vY19 y615 x340, V
- Gui, Add, Checkbox, vY20 y615 x380, VI
- Gui, Add, Checkbox, vY21 y615 x420, VII
- Gui, Add, Text, y640 x108, Others: 
- Gui, Add, Edit, vY22 y635 x165 w200
+ Gui, Add, Text, y475 x245, (
+  Gui, Add, Checkbox, vNot y475 x253, Not assessable)
+ Gui, Add, Checkbox, vNo y495 x40, No regional nodal metastasis.
+ Gui, Add, Checkbox, vYes y515 x40, Yes. If yes, involved lymph nodes:
+ Gui, Add, Checkbox, vY1 y535 x60, N1: Single ipsilateral lymph node <= 3 cm in greatest dimension and ENE(-).
+ Gui, Add, Checkbox, vY2 y555 x60, N2a: Single ipsilateral lymph node > 3 cm, <= 6 cm in greatest dimension and ENE(-).
+ Gui, Add, Checkbox, vY3 y575 x60, N2b: Multiple ipsilateral lymph nodes, <= 6 cm in greatest dimension and ENE(-).
+Gui, Add, Checkbox, vY4 y595 x60, N2c: Bilateral or contralateral lymph nodes, <= 6 cm in greatest dimension and ENE(-)
+Gui, Add, Checkbox, vY5 y615 x60, N3a: Metastasis in a lymph node > 6 cm in greatest dimension and ENE(-).
+Gui, Add, Checkbox, vY6 y635 x60, N3b: Metastasis in any node(s) and clinically overt ENE(+).
+  Gui, Add, Text, y660 x60, Maximal size of the largest positive node: 
+ Gui, Add, Edit, vY7 y655 x308 w60
+  Gui, Add, Text, y660 x373, mm (long axis)
+Gui, Add, Text, y680 x60, Location: Left level:
+ Gui, Add, Checkbox, vY8 y680 x180, I
+ Gui, Add, Checkbox, vY9 y680 x220, II
+ Gui, Add, Checkbox, vY10 y680 x260, III
+ Gui, Add, Checkbox, vY11 y680 x300, IV
+ Gui, Add, Checkbox, vY12 y680 x340, V
+ Gui, Add, Checkbox, vY13 y680 x380, VI
+ Gui, Add, Checkbox, vY14 y680 x420, VII
+Gui, Add, Text, y700 x108, Right level:
+ Gui, Add, Checkbox, vY15 y700 x180, I
+ Gui, Add, Checkbox, vY16 y700 x220, II
+ Gui, Add, Checkbox, vY17 y700 x260, III
+ Gui, Add, Checkbox, vY18 y700 x300, IV
+ Gui, Add, Checkbox, vY19 y700 x340, V
+ Gui, Add, Checkbox, vY20 y700 x380, VI
+ Gui, Add, Checkbox, vY21 y700 x420, VII
 
 ; ---------------Distant Metastasis---------------
    Gui, Font, s12 bold, Arial   ; 改大改粗體
-  Gui, Add, Text, y670 x20, 4. Distant metastasis
+  Gui, Add, Text, y730 x20, 4. Distant metastasis
   Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
   Gui, Font, s10, Arial   ; 恢復
-  Gui, Add, Text, y670 x165, (in this study)
-  Gui, Add, Checkbox, vDM0 y690 x40, No
- Gui, Add, Checkbox, vDM1 y715 x40, Equivocal, location: 
- Gui, Add, Edit, vDM2 y710 x174 w250
- Gui, Add, Checkbox, vDM3 y740 x40, Yes, location:
-Gui, Add, Edit, vDM4 y735 x142 w250
+  Gui, Add, Text, y730 x165, (in this study)
+  Gui, Add, Checkbox, vDM0 y750 x40, No
+ Gui, Add, Checkbox, vDM1 y775 x40, Equivocal, location: 
+ Gui, Add, Edit, vDM2 y770 x174 w250
+ Gui, Add, Checkbox, vDM3 y800 x40, Yes, location:
+Gui, Add, Edit, vDM4 y795 x142 w250
  
 ; ---------------Other Findings---------------
  Gui, Font, s12 bold, Arial   ; 改大改粗體
- Gui, Add, Text, y770 x20, 5. Other findings
+ Gui, Add, Text, y830 x20, 5. Other findings
  Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
  Gui, Font, s10, Arial   ; 恢復
- Gui, Add, Edit, vOF0 y790 x40 w500
+ Gui, Add, Edit, vOF0 y850 x40 w500
 
 ; Buttons
  Gui, Font, s12 bold, Arial   ; 改大改粗體
- Gui, Add, Button, Default gGenerateReport y830 x20, Generate Report
- Gui, Add, Button, gExit y830 x170, Exit
+ Gui, Add, Button, Default gGenerateReport y910 x20, Generate Report
+ Gui, Add, Button, gExit y910 x170, Exit
 
 ; Show GUI
-Gui, Show,  w615 h880, Oropharynx Carcinoma Imaging Report Generator
+Gui, Show,  w615 h960, Oral Cavity Carcinoma Imaging Report Generator
 return
 
 ; === 生成報告===
@@ -144,7 +152,7 @@ GenerateReport:
 FormatTime, CurrentDate,, yyyy/MM/dd
 FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
-    FileAppend, MCH Imaging Report for Oropharynx Carcinoma (AJCC 8th)`n, c:\temp\test.txt
+    FileAppend, MCH Imaging Report for Oral Cavity Carcinoma (AJCC 8th)`n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
     FileAppend, 本表單僅依據單次影像進行分期供腫瘤團隊參考，並不代表病人的臨床分期，臨床分期需綜合病人臨床發現、各種影像(包括各種內視鏡及超音波檢查)及病理表現來進行判斷，病人的最終臨床分期可能因癌症團隊討論有所異動，敬請參閱病歷首頁。 `n, c:\temp\test.txt
     FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -168,64 +176,126 @@ if L2 = 1
  {
    FileAppend,  %4_Space%□ No evidence of primary tumor. `n, c:\temp\test.txt
 }
- FileAppend,  %4_Space%Location: , c:\temp\test.txt
+FileAppend,  %4_Space%Laterality: , c:\temp\test.txt
 if L3 = 1
  {
-   FileAppend,  %2_Space%■ Base of the tongue, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Left, c:\temp\test.txt
 }
   if L3 = 0
  {
-   FileAppend,  %2_Space%□ Base of the tongue,  c:\temp\test.txt
+   FileAppend,  %2_Space%□ Left,  c:\temp\test.txt
 }
-if L4= 1
+if L4 = 1
  {
-   FileAppend,  %2_Space%■ Tonsillar fossa, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Right, c:\temp\test.txt
 }
   if L4 = 0
  {
-   FileAppend,  %2_Space%□ Tonsillar fossa,  c:\temp\test.txt
+   FileAppend,  %2_Space%□ Right, c:\temp\test.txt
 }
 if L5 = 1
  {
-   FileAppend,  %2_Space%■ Soft palate `n , c:\temp\test.txt
+   FileAppend, 
+(
+ %2_Space%■ Bilateral
+)`n, c:\temp\test.txt
 }
   if L5 = 0
  {
-   FileAppend,  %2_Space%□ Soft palate `n ,  c:\temp\test.txt
+   FileAppend,  
+(
+%2_Space%□ Bilateral
+)`n, c:\temp\test.txt
 }
+ FileAppend,  %4_Space%Location: , c:\temp\test.txt
 if L6 = 1
  {
-   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%■ Oropharyngeal walls, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Upper Lip, c:\temp\test.txt
 }
   if L6 = 0
  {
-   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%□ Oropharyngeal walls,  c:\temp\test.txt
+   FileAppend,  %2_Space%□ Upper Lip,  c:\temp\test.txt
 }
 if L7 = 1
  {
-   FileAppend,  %2_Space%■ Others: __%L8%__  `n, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Lower Lip, c:\temp\test.txt
 }
   if L7 = 0
  {
-   FileAppend,  %2_Space%□ Others: __%L8%__ `n,  c:\temp\test.txt
+   FileAppend,  %2_Space%□ Lower Lip,  c:\temp\test.txt
 }
-
-FileAppend,  %4_Space%Size: , c:\temp\test.txt
+if L8 = 1
+ {
+   FileAppend,  %2_Space%■ Oral tongue `n , c:\temp\test.txt
+}
+  if L8 = 0
+ {
+   FileAppend,  %2_Space%□ Oral tongue `n ,  c:\temp\test.txt
+}
 if L9 = 1
  {
-   FileAppend,  %2_Space%■ Non-measurable, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%■ Upper gingivobuccal mucosa, c:\temp\test.txt
 }
   if L9 = 0
  {
-   FileAppend,  %2_Space%□ Non-measurable,  c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%□ Upper gingivobuccal mucosa,  c:\temp\test.txt
 }
 if L10 = 1
  {
-   FileAppend,  %2_Space%■ Measurable: __%L11%__cm(largest diameter)`n, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Lower gingivobuccal mucosa `n, c:\temp\test.txt
 }
   if L10 = 0
  {
-   FileAppend,  %2_Space%□ Measurable: __%L11%__cm(largest diameter) `n,  c:\temp\test.txt
+   FileAppend,  %2_Space%□ Lower gingivobuccal mucosa `n,  c:\temp\test.txt
+}
+if L11 = 1
+ {
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%■ Hard palate, c:\temp\test.txt
+}
+  if L11 = 0
+ {
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%□ Hard palate,  c:\temp\test.txt
+}
+if L12 = 1
+ {
+   FileAppend,  %2_Space%■ Mouth floor, c:\temp\test.txt
+}
+  if L12 = 0
+ {
+   FileAppend,  %2_Space%□ Mouth floor,  c:\temp\test.txt
+}
+if L13 = 1
+ {
+   FileAppend,  %2_Space%■ Retromolar trigone `n, c:\temp\test.txt
+}
+  if L13 = 0
+ {
+   FileAppend,  %2_Space%□ Retromolar trigone `n,  c:\temp\test.txt
+}
+if L14 = 1
+ {
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%■ Others: __%L15%__ `n, c:\temp\test.txt
+}
+  if L14 = 0
+ {
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%□ Others: __%L15%__ `n,  c:\temp\test.txt
+}
+FileAppend,  %4_Space%Size: , c:\temp\test.txt
+if L16 = 1
+ {
+   FileAppend,  %2_Space%■ Non-measurable, c:\temp\test.txt
+}
+  if L16 = 0
+ {
+   FileAppend,  %2_Space%□ Non-measurable,  c:\temp\test.txt
+}
+if L17 = 1
+ {
+   FileAppend,  %2_Space%■ Measurable: __%L18%__cm(largest diameter)`n, c:\temp\test.txt
+}
+  if L17 = 0
+ {
+   FileAppend,  %2_Space%□ Measurable: __%L18%__cm(largest diameter) `n,  c:\temp\test.txt
 }   
  FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 ;--------------第三段-----------------------------------------------
@@ -273,115 +343,131 @@ if T5= 1
 }
 if T6= 1
  {
-   FileAppend,  %4_Space%■ T3: Extension to lingual surface of epiglottis.`n, c:\temp\test.txt
+   FileAppend,  %4_Space%■ T4a: Moderately advanced local disease. Tumor invades: `n, c:\temp\test.txt
 }
   if T6= 0
  {
-   FileAppend,  %4_Space%□ T3: Extension to lingual surface of epiglottis. `n, c:\temp\test.txt
+   FileAppend,  %4_Space%□ T4a: Moderately advanced local disease. Tumor invades: `n, c:\temp\test.txt
 }
 if T7= 1
  {
-   FileAppend,  %4_Space%■ T4a: Moderately advanced local disease. Tumor invades:`n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%■ Lip tumor: , c:\temp\test.txt
 }
   if T7= 0
  {
-   FileAppend,  %4_Space%□ T4a: Moderately advanced local disease. Tumor invades: `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%□ Lip tumor: , c:\temp\test.txt
 }
 if T8= 1
  {
-   FileAppend,  %4_Space%%4_Space%■ Larynx, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Through cortical bone, c:\temp\test.txt
 }
   if T8= 0
  {
-   FileAppend,  %4_Space%%4_Space%□ Larynx, c:\temp\test.txt
+   FileAppend,  %2_Space%□ Through cortical bone, c:\temp\test.txt
 }
 if T9= 1
  {
-   FileAppend,  %2_Space%■ Extrinsic muscle of tongue  , c:\temp\test.txt
+   FileAppend,  %2_Space%■ Inferior alveolar nerve `n, c:\temp\test.txt
 }
   if T9= 0
  {
-   FileAppend,  %2_Space%□ Extrinsic muscle of tongue  , c:\temp\test.txt
+   FileAppend,  %2_Space%□ Inferior alveolar nerve `n, c:\temp\test.txt
 }
 if T10= 1
  {
-   FileAppend,  %2_Space%■ Medial pterygoid muscle `n  , c:\temp\test.txt
+   FileAppend, %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%■ Floor of mouth, c:\temp\test.txt
 }
   if T10= 0
  {
-   FileAppend,  %2_Space%□ Medial pterygoid muscle `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%□ Floor of mouth, c:\temp\test.txt
 }
 if T11= 1
  {
-   FileAppend,  %4_Space%%4_Space%■ Hard palate , c:\temp\test.txt
+   FileAppend,  %2_Space%■ Skin of face`n, c:\temp\test.txt
 }
   if T11= 0
  {   
-FileAppend, %4_Space%%4_Space%□ Hard palate, c:\temp\test.txt
+FileAppend,  %2_Space%□ Skin of face`n, c:\temp\test.txt
 }
 if T12= 1
  {
-   FileAppend,  %2_Space%■ Mandible `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%■ Oral cavity:, c:\temp\test.txt
 }
   if T12= 0
  {
-   FileAppend,  %2_Space%□ Mandible `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%□ Oral cavity:, c:\temp\test.txt
 }
 if T13= 1
  {
-   FileAppend,  %4_Space%■ T4b: Very advanced local disease. Tumor invades: `n, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Through cortical bone (mandible or maxilla) `n, c:\temp\test.txt
 }
   if T13= 0
  {
-   FileAppend,  %4_Space%□ T4b: Very advanced local disease. Tumor invades: `n, c:\temp\test.txt
+   FileAppend,  %2_Space%□ Through cortical bone (mandible or maxilla) `n, c:\temp\test.txt
 }
 if T14= 1
  {
-   FileAppend, %4_Space%%4_Space%■ Lateral pterygoid muscle, c:\temp\test.txt
+   FileAppend, %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%■ Maxillary sinus, c:\temp\test.txt
 }
   if T14= 0
  {
-   FileAppend,  %4_Space%%4_Space%□ Lateral pterygoid muscle, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%□ Maxillary sinus, c:\temp\test.txt
 }
 if T15= 1
  {
-   FileAppend, %2_Space%■ Pterygoid plates , c:\temp\test.txt
+   FileAppend, %2_Space%■ Skin of face `n, c:\temp\test.txt
 }
   if T15= 0
  {
-   FileAppend,  %2_Space%□ Pterygoid plates , c:\temp\test.txt
+   FileAppend,  %2_Space%□ Skin of face `n, c:\temp\test.txt
 }
 if T16= 1
  {
-   FileAppend, %2_Space%■ Lateral nasopharynx `n, c:\temp\test.txt
+   FileAppend,  %4_Space%■ T4b: Very advanced local disease. Tumor invades: `n, c:\temp\test.txt
 }
   if T16= 0
- {
-   FileAppend,  %2_Space%□ Lateral nasopharynx `n, c:\temp\test.txt
+ {   
+FileAppend,  %4_Space%□ T4b: Very advanced local disease. Tumor invades: `n, c:\temp\test.txt
 }
 if T17= 1
  {
-   FileAppend,  %4_Space%%4_Space%■ Skull base, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%■ Masticator space, c:\temp\test.txt
 }
   if T17= 0
  {
-   FileAppend,  %4_Space%%4_Space%□ Skull base, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%□ Masticator space, c:\temp\test.txt
 }
 if T18= 1
  {
-   FileAppend,  %2_Space%■ Encasement of carotid artery, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Pterygoid plates, c:\temp\test.txt
 }
   if T18= 0
  {
-   FileAppend,  %2_Space%□ Encasement of carotid artery, c:\temp\test.txt
+   FileAppend,  %2_Space%□ Pterygoid plates, c:\temp\test.txt
 }
 if T19= 1
  {
-   FileAppend,  %2_Space%■ Others: __%T20%__ `n, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Skull base `n, c:\temp\test.txt
 }
   if T19= 0
  {
-   FileAppend,  %2_Space%□ Others: __%T20%__  `n, c:\temp\test.txt
+   FileAppend,  %2_Space%□ Skull base `n, c:\temp\test.txt
+}
+if T20= 1
+ {
+   FileAppend,  %4_Space%%4_Space%■ Encase internal carotid artery, c:\temp\test.txt
+}
+  if T20= 0
+ {
+   FileAppend,  %4_Space%%4_Space%□ Encase internal carotid artery, c:\temp\test.txt
+}
+if T21= 1
+ {
+   FileAppend,  %2_Space%■ Others: __%T22%__ `n, c:\temp\test.txt
+}
+  if T21= 0
+ {
+   FileAppend,  %2_Space%□ Others: __%T22%__ `n, c:\temp\test.txt
 }
     FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 
@@ -617,7 +703,6 @@ if Y21= 1
  {
    FileAppend,  %3_Space%□ VII`n, c:\temp\test.txt
 }
-FileAppend,  %4_Space%%4_Space%%4_Space%%4_Space%%4_Space%%4_Space%Others: __%Y22%__  `n, c:\temp\test.txt
 
 FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 

@@ -146,7 +146,8 @@ GenerateReport:
      ; 刪除現有的 test.txt 文件
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
-FileAppend,  Addtional report for cancer staging  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FormatTime, CurrentDate,, yyyy/MM/dd
+FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Hypopharyngeal Carcinoma (AJCC 8th)`n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版

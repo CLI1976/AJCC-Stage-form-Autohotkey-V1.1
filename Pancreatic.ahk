@@ -1,6 +1,6 @@
 ; Pancreatic cancer Imaging Report Generator
-; ä»¥ä¸‹è®Šæ•¸ç”¨æ–¼åœ¨fileappendçš„é–‹é ­çµæŸæ’å…¥ç©ºç™½ç”¨çš„
-; å¹³å¸¸è·³è¡Œ Y+20; æœ‰edit, text+25 edit+20 ; æ®µè½+30
+; ¥H¤UÅÜ¼Æ¥Î©ó¦bfileappendªº¶}ÀYµ²§ô´¡¤JªÅ¥Õ¥Îªº
+; ¥­±`¸õ¦æ Y+20; ¦³edit, text+25 edit+20 ; ¬q¸¨+30
 6_Space := "      "
 5_Space := "     "
 4_Space := "    "
@@ -22,10 +22,10 @@ Gui, Color, 85ddda
 Gui, Font, cDefault, Arial
 
 ; ---------------Tumor Size/Location---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y15 x20, 1. Tumor location / Size
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y15 x201, (
 Gui, Add, Checkbox, vL1 y15 x206, Tx: Not assessable)
 Gui, Add, Checkbox, vL2 y40 x40, No evidence of primary tumor.
@@ -42,10 +42,10 @@ Gui, Add, Edit, vL10 y165 x300 w40
 Gui, Add, Text, y170 x343, cm (greatest diameter)
 
 ; ---------------Tumor Invastion---------------
- Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+ Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
  Gui, Add, Text, y200 x20, 2. Tumor invasion or encasement
- Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
- Gui, Font, s10, Arial   ; æ¢å¾©
+ Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+ Gui, Font, s10, Arial   ; «ì´_
  Gui, Add, Text, y200 x281, (
  Gui, Add, Checkbox, vT1 y200 x287, Not assessable)
  Gui, Add, Checkbox, vT2 y220 x40, T0: No evidence of primary tumor.
@@ -63,10 +63,10 @@ Gui, Add, Text, y170 x343, cm (greatest diameter)
  Gui, Add, Edit, vT14 y400 x183 w250
 
 ; ---------------Regional nodal metastasis---------------
- Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+ Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
  Gui, Add, Text, y435 x20, 3. Regional nodal metastasis
- Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
- Gui, Font, s10, Arial   ; æ¢å¾©
+ Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+ Gui, Font, s10, Arial   ; «ì´_
  Gui, Add, Text, y435 x245, (
  Gui, Add, Checkbox, vNot y435 x253, Not assessable)
  Gui, Add, Checkbox, vNo y455 x40, No 
@@ -83,24 +83,24 @@ Gui, Add, Text, y595 x60, Location:
 Gui, Add, Edit, vY3 y590 x120 w140
 
 ; ---------------Distant Metastasis---------------
-   Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+   Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
   Gui, Add, Text, y625 x20, 4. Distant metastasis
-  Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
- Gui, Font, s10, Arial   ; æ¢å¾©
+  Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+ Gui, Font, s10, Arial   ; «ì´_
  Gui, Add, Text, y625 x165, (in this study)
  Gui, Add, Checkbox, vDM0 y645 x40, No or Equivocal
  Gui, Add, Checkbox, vDM1 y670 x40, Yes, location:
  Gui, Add, Edit, vDM2 y665 x142 w250
  
 ; ---------------Other Findings---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
   Gui, Add, Text, y700 x20, 5. Other findings
-  Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›ä¾†)
-  Gui, Font, s10, Arial   ; æ¢å¾©
+  Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+  Gui, Font, s10, Arial   ; «ì´_
  Gui, Add, Edit, vOF1 y720 x40 w250
   
 ; Buttons
- Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+ Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
  Gui, Add, Button, Default gGenerateReport y770 x20, Generate Report
  Gui, Add, Button, gExit y770 x170, Exit
 
@@ -108,251 +108,252 @@ Gui, Add, Edit, vY3 y590 x120 w140
 Gui, Show, w615 h820, Pancreatic Cancer Imaging Report Generator
 return
 
-; === ç”Ÿæˆå ±å‘Š===
+; === ¥Í¦¨³ø§i===
 GenerateReport:
     ; Collect data from GUI
     Gui, Submit, NoHide
-     ; åˆªé™¤ç¾æœ‰çš„ test.txt æ–‡ä»¶
+     ; §R°£²{¦³ªº test.txt ¤å¥ó
     FileDelete, c:\temp\test.txt
-    ; å°‡çµæœé€è¡Œè¼¸å…¥test.txtä¸­
-FileAppend,  Addtional report for cancer staging  `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    ; ±Nµ²ªG³v¦æ¿é¤Jtest.txt¤¤
+FormatTime, CurrentDate,, yyyy/MM/dd
+FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Pancreatic Carcinoma (AJCC 8th) `n, c:\temp\test.txt
-    FileAppend,    `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
-    FileAppend, *æœ¬è¡¨å–®åƒ…ä¾æ“šå–®æ¬¡å½±åƒé€²è¡Œåˆ†æœŸä¾›è…«ç˜¤åœ˜éšŠåƒè€ƒï¼Œä¸¦ä¸ä»£è¡¨ç—…äººçš„è‡¨åºŠåˆ†æœŸï¼Œè‡¨åºŠåˆ†æœŸéœ€ç¶œåˆç—…äººè‡¨åºŠç™¼ç¾ã€å„ç¨®å½±åƒ(åŒ…æ‹¬å„ç¨®å…§è¦–é¡åŠè¶…éŸ³æ³¢æª¢æŸ¥)åŠç—…ç†è¡¨ç¾ä¾†é€²è¡Œåˆ¤æ–·ï¼Œç—…äººçš„æœ€çµ‚è‡¨åºŠåˆ†æœŸå¯èƒ½å› ç™Œç—‡åœ˜éšŠè¨è«–æœ‰æ‰€ç•°å‹•ï¼Œæ•¬è«‹åƒé–±ç—…æ­·é¦–é ã€‚ `n, c:\temp\test.txt
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,    `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
+    FileAppend, *¥»ªí³æ¶È¨Ì¾Ú³æ¦¸¼v¹³¶i¦æ¤À´Á¨Ñ¸~½F¹Î¶¤°Ñ¦Ò¡A¨Ã¤£¥Nªí¯f¤HªºÁ{§É¤À´Á¡AÁ{§É¤À´Á»İºî¦X¯f¤HÁ{§Éµo²{¡B¦UºØ¼v¹³(¥]¬A¦UºØ¤ºµøÃè¤Î¶W­µªiÀË¬d)¤Î¯f²zªí²{¨Ó¶i¦æ§PÂ_¡A¯f¤Hªº³Ì²×Á{§É¤À´Á¥i¯à¦]Àù¯g¹Î¶¤°Q½×¦³©Ò²§°Ê¡A·q½Ğ°Ñ¾\¯f¾ú­º­¶¡C `n, c:\temp\test.txt
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
     
-;--------------ç¬¬ä¸€æ®µ-----------------------------------------------
+;--------------²Ä¤@¬q-----------------------------------------------
 FileAppend,  1. %1_Space%Tumor location / size , c:\temp\test.txt  
 if L1 = 1
  {
-   FileAppend,  %2_Space%(â–  Tx: Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  %2_Space%(¡½ Tx: Not assessable)  `n, c:\temp\test.txt
 }
   if L1 = 0
  {
-   FileAppend,  %2_Space%(â–¡ Tx: Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  %2_Space%(¡¼ Tx: Not assessable)  `n, c:\temp\test.txt
 }
 if L2 = 1
  {
-   FileAppend,  %4_Space%â–  No evidence of primary tumor.  `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No evidence of primary tumor.  `n, c:\temp\test.txt
 }
   if L2 = 0
  {
-   FileAppend,  %4_Space%â–¡ No evidence of primary tumor.  `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No evidence of primary tumor.  `n, c:\temp\test.txt
 }
    FileAppend,  %4_Space%Location:`n , c:\temp\test.txt
 if L3 = 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Pancreatic head and neck  `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Pancreatic head and neck  `n, c:\temp\test.txt
 }
   if L3 = 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Pancreatic head and neck  `n,  c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Pancreatic head and neck  `n,  c:\temp\test.txt
 }
 if L4 = 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Pancreatic body (between the left border of the SMV and the left border of the aorta) `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Pancreatic body (between the left border of the SMV and the left border of the aorta) `n, c:\temp\test.txt
 }
   if L4 = 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Pancreatic body (between the left border of the SMV and the left border of the aorta)`n,  c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Pancreatic body (between the left border of the SMV and the left border of the aorta)`n,  c:\temp\test.txt
 }
 if L5 = 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Pancreatic tail `n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Pancreatic tail `n , c:\temp\test.txt
 }
   if L5 = 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Pancreatic tail `n,  c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Pancreatic tail `n,  c:\temp\test.txt
 }
 if L6 = 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Others: __%L7%__ `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Others: __%L7%__ `n, c:\temp\test.txt
 }
   if L6 = 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Others: __%L7%__ `n ,  c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Others: __%L7%__ `n ,  c:\temp\test.txt
 }
 FileAppend,  %4_Space%Size: , c:\temp\test.txt
 if L8 = 1
  {
-   FileAppend,  %2_Space%â–  Non-measureable, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Non-measureable, c:\temp\test.txt
 }
   if L8 = 0
  {
-   FileAppend,  %2_Space%â–¡ Non-measureable,  c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ Non-measureable,  c:\temp\test.txt
 }
 if L9 = 1
  {
-   FileAppend,  %2_Space%â–  Measurable: __%L10%__cm (greatest diameter) `n, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Measurable: __%L10%__cm (greatest diameter) `n, c:\temp\test.txt
 }
   if L9 = 0
  {
-   FileAppend,  %2_Space%â–¡ Measurable: __%L10%__ cm (greatest diameter) `n,  c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ Measurable: __%L10%__ cm (greatest diameter) `n,  c:\temp\test.txt
 }
 
- FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+ FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬äºŒæ®µ-----------------------------------------------
+;--------------²Ä¤G¬q-----------------------------------------------
 FileAppend,  2. %1_Space%Tumor invasion or encasement  , c:\temp\test.txt  
 
 if T1= 1
  {
-   FileAppend,  %2_Space%(â–  Not assessable)`n, c:\temp\test.txt
+   FileAppend,  %2_Space%(¡½ Not assessable)`n, c:\temp\test.txt
 }
   if T1= 0
  {
-   FileAppend,  %2_Space%(â–¡ Not assessable)`n, c:\temp\test.txt
+   FileAppend,  %2_Space%(¡¼ Not assessable)`n, c:\temp\test.txt
 }
 if T2= 1
  {
-   FileAppend,  %4_Space%â–  T0: No evidence of primary tumor `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ T0: No evidence of primary tumor `n, c:\temp\test.txt
 }
   if T2= 0
  {
-   FileAppend,  %4_Space%â–¡ T0: No evidence of primary tumor `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ T0: No evidence of primary tumor `n, c:\temp\test.txt
 }
  if T3= 1
  {
-   FileAppend,  %4_Space%â–  T1-T3: Tumor limited to the pancreas `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ T1-T3: Tumor limited to the pancreas `n, c:\temp\test.txt
 }
   if T3= 0
  {
-   FileAppend,  %4_Space%â–¡ T1-T3: Tumor limited to the pancreas  `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ T1-T3: Tumor limited to the pancreas  `n, c:\temp\test.txt
 }
 if T4= 1
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–  T1a: Tumor <= 0.5 cm
+%4_Space%%4_Space%¡½ T1a: Tumor <= 0.5 cm
  )`n, c:\temp\test.txt
 }
   if T4= 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–¡ T1a: Tumor <= 0.5 cm
+%4_Space%%4_Space%¡¼ T1a: Tumor <= 0.5 cm
 ) `n, c:\temp\test.txt
 }
 if T5= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  T1b: Tumor > 0.5 cm but < 1cm  `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ T1b: Tumor > 0.5 cm but < 1cm  `n, c:\temp\test.txt
 }
   if T5= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ T1b: Tumor > 0.5 cm but < 1cm `n, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ T1b: Tumor > 0.5 cm but < 1cm `n, c:\temp\test.txt
 }
 if T6= 1
  {
    FileAppend, 
 (
-%4_Space%%4_Space%â–  T1c: Tumor 1 cm to 2 cm
+%4_Space%%4_Space%¡½ T1c: Tumor 1 cm to 2 cm
 )`n , c:\temp\test.txt
 }
   if T6= 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–¡ T1c: Tumor 1 cm to 2 cm
+%4_Space%%4_Space%¡¼ T1c: Tumor 1 cm to 2 cm
 )`n , c:\temp\test.txt
 }
 if T7= 1
  {
    FileAppend, 
 (
-%4_Space%%4_Space%â–  T2: Tumor > 2cm but <= 4 cm
+%4_Space%%4_Space%¡½ T2: Tumor > 2cm but <= 4 cm
 )`n , c:\temp\test.txt
 }
   if T7= 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–¡ T2: Tumor > 2cm but <= 4 cm
+%4_Space%%4_Space%¡¼ T2: Tumor > 2cm but <= 4 cm
 )`n , c:\temp\test.txt
 }
 if T8= 1
  {
    FileAppend, 
 (
-%4_Space%%4_Space%â–  T3: Tumor > 4 cm
+%4_Space%%4_Space%¡½ T3: Tumor > 4 cm
 )`n , c:\temp\test.txt
 }
   if T8= 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%â–¡ T3: Tumor > 4 cm
+%4_Space%%4_Space%¡¼ T3: Tumor > 4 cm
 )`n , c:\temp\test.txt
 }
 if T9= 1
  {
-   FileAppend,  %4_Space%â–  T4: Tumor invasion beyond pancreas `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ T4: Tumor invasion beyond pancreas `n, c:\temp\test.txt
 }
   if T9= 0
  {
-   FileAppend,  %4_Space%â–¡ T4: Tumor invasion beyond pancreas `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ T4: Tumor invasion beyond pancreas `n, c:\temp\test.txt
 }
 if T10= 1
  {
-   FileAppend, %4_Space%%4_Space%â–  Celiac trunk, c:\temp\test.txt
+   FileAppend, %4_Space%%4_Space%¡½ Celiac trunk, c:\temp\test.txt
 }
   if T10= 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Celiac trunk, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Celiac trunk, c:\temp\test.txt
 }
 if T11= 1
  {
-   FileAppend,  %2_Space%â–  Superior mesenteric artery(SMA), c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Superior mesenteric artery(SMA), c:\temp\test.txt
 }
   if T11= 0
  {   
-FileAppend,  %2_Space%â–¡ Superior mesenteric artery(SMA), c:\temp\test.txt
+FileAppend,  %2_Space%¡¼ Superior mesenteric artery(SMA), c:\temp\test.txt
 }
 if T12= 1
  {
-   FileAppend,  %2_Space%â–  Common hepatic artery`n , c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Common hepatic artery`n , c:\temp\test.txt
 }
   if T12= 0
  {   
-FileAppend,  %2_Space%â–¡ Common hepatic artery`n, c:\temp\test.txt
+FileAppend,  %2_Space%¡¼ Common hepatic artery`n, c:\temp\test.txt
 }
 if T13= 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Adjacent organs: __%T14%__`n , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Adjacent organs: __%T14%__`n , c:\temp\test.txt
 }
   if T13= 0
  {   
-FileAppend,  %4_Space%%4_Space%â–¡ Adjacent organs: __%T14%__`n, c:\temp\test.txt
+FileAppend,  %4_Space%%4_Space%¡¼ Adjacent organs: __%T14%__`n, c:\temp\test.txt
 }
-FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬ä¸‰æ®µ-----------------------------------------------
+;--------------²Ä¤T¬q-----------------------------------------------
 
 FileAppend,  3. %1_Space%Regional nodal metastasis(, c:\temp\test.txt  
 if Not= 1
  {
-   FileAppend,  â–  Not assessable) %1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡½ Not assessable) %1_Space% `n, c:\temp\test.txt
 }
   if Not= 0
  {
-   FileAppend,  â–¡ Not assessable)%1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Not assessable)%1_Space% `n, c:\temp\test.txt
 }
 if No= 1
  {
-   FileAppend,  %4_Space%â–  No `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No `n, c:\temp\test.txt
 }
   if No= 0
  {
-   FileAppend,  %4_Space%â–¡ No `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No `n, c:\temp\test.txt
 }
 if E1= 1
  {
-   FileAppend,  %4_Space%â–  Equivocal (5-9mm)  `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Equivocal (5-9mm)  `n, c:\temp\test.txt
 }
   if E1= 0
  {
-   FileAppend,  %4_Space%â–¡ Equivocal (5-9mm)  `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Equivocal (5-9mm)  `n, c:\temp\test.txt
 }
 FileAppend,  %4_Space%%4_Space%Number: __%E2%__  `n, c:\temp\test.txt
 FileAppend,  %4_Space%%4_Space%Location: __%E3%__  `n, c:\temp\test.txt
@@ -360,50 +361,50 @@ FileAppend,  %4_Space%%4_Space%Location: __%E3%__  `n, c:\temp\test.txt
 
 if Y1= 1
  {
-   FileAppend,  %4_Space%â–  Yes. If yes:   `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Yes. If yes:   `n, c:\temp\test.txt
 }
   if Y1= 0
  {
-   FileAppend,  %4_Space%â–¡ Yes. If yes:   `n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Yes. If yes:   `n, c:\temp\test.txt
 }
 FileAppend,  %4_Space%%4_Space%Number: __%Y2%__  (N1: 1-3; N2: >= 4) `n, c:\temp\test.txt
 FileAppend,  %4_Space%%4_Space%Location: __%Y3%__  `n, c:\temp\test.txt
 
-FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬å››æ®µ-----------------------------------------------
+;--------------²Ä¥|¬q-----------------------------------------------
 
    FileAppend,  4. %1_Space%Distant metastasis(in this study)`n, c:\temp\test.txt  
 if DM0= 1
  {
    FileAppend,  
 (
-%4_Space%â–  No or Equivocal
+%4_Space%¡½ No or Equivocal
 ) `n, c:\temp\test.txt
 }
   if DM0 = 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ No or Equivocal
+%4_Space%¡¼ No or Equivocal
 ) `n, c:\temp\test.txt
 }
 if DM1= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Yes, location: __%DM2%__
+%4_Space%¡½ Yes, location: __%DM2%__
 )`n, c:\temp\test.txt
 }
   if DM1 = 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Yes, location: __%DM2%__
+%4_Space%¡¼ Yes, location: __%DM2%__
 )`n, c:\temp\test.txt
 }    
 
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
     FileAppend,  5. %1_Space%Other findings: , c:\temp\test.txt 
     FileAppend,  %1_Space%__%OF1%__ `n, c:\temp\test.txt 
@@ -411,7 +412,7 @@ if DM1= 1
 
 ; ==================================
    FileRead, ClipboardContent, c:\temp\test.txt
-    ; å°‡å…§å®¹è¤‡è£½åˆ°å‰ªè²¼ç°¿
+    ; ±N¤º®e½Æ»s¨ì°Å¶KÃ¯
     Clipboard := ClipboardContent
     MsgBox, %Clipboard%
 return

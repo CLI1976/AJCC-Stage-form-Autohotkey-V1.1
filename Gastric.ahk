@@ -1,5 +1,5 @@
 ; Gastric cancer Imaging Report Generator
-; ä»¥ä¸‹è®Šæ•¸ç”¨æ–¼åœ¨fileappendçš„é–‹é ­çµæŸæ’å…¥ç©ºç™½ç”¨çš„
+; ¥H¤UÅÜ¼Æ¥Î©ó¦bfileappendªº¶}ÀYµ²§ô´¡¤JªÅ¥Õ¥Îªº
 6_Space := "      "
 5_Space := "     "
 4_Space := "    "
@@ -25,11 +25,11 @@ Gui, Font, cDefault, Arial
 
 
 ; ---------------Tumor Location and Size---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y15 x20, 1. Tumor location
 Gui, Add, Text, y35 x40, Location:
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›žä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y36 x120, (
 Gui, Add, Checkbox, vTLS y36 x128, Not assessable)
 Gui, Add, Checkbox, vL1 y55 x60, Cardia
@@ -41,20 +41,20 @@ Gui, Add, Edit, vL9 y52 x385 w100
 Gui, Add, Checkbox, vL6 y75 x60, Body:
 Gui, Add, Checkbox, vL7 y75 x118, Lesser/
 Gui, Add, Checkbox, vL8 y75 x184, Greater curvature
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y95 x40, Size:
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›žä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vNonM y96 x87, Non-measurable
 Gui, Add, Checkbox, vMeas y96 x205, Measurable:
 Gui, Add, Edit, vMeas1 y92 x300 w60
 Gui, Add, Text, y96 x363, cm(greatest diameter)
 
 ; ---------------Tumor Invastion---------------
-Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y125 x20, 2. Tumor invasion
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›žä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y126 x163, (
 Gui, Add, Checkbox, vNota y126 x171, Not assessable)
 Gui, Add, Checkbox, vT1 y145 x40, Gastric wall(T1-T2)
@@ -66,10 +66,10 @@ Gui, Add, Checkbox, vT4 y185 x40, Others:
 Gui, Add, Edit, vT6 y182 x105 w120
 
 ; ---------------Regional nodal metastasis---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y215 x20, 3. Regional nodal metastasis
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›žä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Checkbox, vNo y235 x40, No
 Gui, Add, Checkbox, vNequ y255 x40, Equivocal, 
 Gui, Add, Text, y255 x130, Number:
@@ -84,10 +84,10 @@ Gui, Add, Text, y330 x130, Location:
 Gui, Add, Edit, vNy2 y327 x185 w240
 
 ; ---------------Distant Metastasis---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y360 x20, 4. Distant metastasis
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›žä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Text, y360 x165, (in this study)
 
 Gui, Add, Checkbox, vDM0 y380 x40, No
@@ -99,14 +99,14 @@ Gui, Add, Checkbox, vDM3 y450 x40, Distant organ:
 Gui, Add, Edit, vDM6 y447 x145 w250
 
 ; ---------------Other Findings---------------
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Text, y480 x20, 5. Other findings
-Gui, Font ; é‡ç½®å­—é«”è¨­ç½®(ä¸åŠ é€™å€‹ ç²—é«”æ”¹ä¸å›žä¾†)
-Gui, Font, s10, Arial   ; æ¢å¾©
+Gui, Font ; ­«¸m¦rÅé³]¸m(¤£¥[³o­Ó ²ÊÅé§ï¤£¦^¨Ó)
+Gui, Font, s10, Arial   ; «ì´_
 Gui, Add, Edit, vOF0 y500 x20 w500
 
 ; Buttons
-  Gui, Font, s12 bold, Arial   ; æ”¹å¤§æ”¹ç²—é«”
+  Gui, Font, s12 bold, Arial   ; §ï¤j§ï²ÊÅé
 Gui, Add, Button, Default gGenerateReport y540 x20, Generate Report
 Gui, Add, Button, gExit y540 x170, Exit
 
@@ -114,188 +114,189 @@ Gui, Add, Button, gExit y540 x170, Exit
 Gui, Show, w600 h600, Gastric Cancer Imaging Report Generator
 return
 
-; === ç”Ÿæˆå ±å‘Š===
+; === ¥Í¦¨³ø§i===
 GenerateReport:
     ; Collect data from GUI
     Gui, Submit, NoHide
-     ; åˆªé™¤ç¾æœ‰çš„ test.txt æ–‡ä»¶
+     ; §R°£²{¦³ªº test.txt ¤å¥ó
     FileDelete, c:\temp\test.txt
-    ; å°‡çµæžœé€è¡Œè¼¸å…¥test.txtä¸­
-FileAppend,  Addtional report for cancer staging  `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æŽ’ç‰ˆ
-FileAppend,   =========================================== `n, c:\temp\test.txt 
+    ; ±Nµ²ªG³v¦æ¿é¤Jtest.txt¤¤
+    FormatTime, CurrentDate,, yyyy/MM/dd
+FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
+FileAppend,   =========================================== `n, c:\temp\test.txt   
     FileAppend, MCH Imaging Report for Gastric Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
-    FileAppend,    `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æŽ’ç‰ˆ
-    FileAppend, *æœ¬è¡¨å–®åƒ…ä¾æ“šå–®æ¬¡å½±åƒé€²è¡Œåˆ†æœŸä¾›è…«ç˜¤åœ˜éšŠåƒè€ƒï¼Œä¸¦ä¸ä»£è¡¨ç—…äººçš„è‡¨åºŠåˆ†æœŸï¼Œè‡¨åºŠåˆ†æœŸéœ€ç¶œåˆç—…äººè‡¨åºŠç™¼ç¾ã€å„ç¨®å½±åƒ(åŒ…æ‹¬å„ç¨®å…§è¦–é¡åŠè¶…éŸ³æ³¢æª¢æŸ¥)åŠç—…ç†è¡¨ç¾ä¾†é€²è¡Œåˆ¤æ–·ï¼Œç—…äººçš„æœ€çµ‚è‡¨åºŠåˆ†æœŸå¯èƒ½å› ç™Œç—‡åœ˜éšŠè¨Žè«–æœ‰æ‰€ç•°å‹•ï¼Œæ•¬è«‹åƒé–±ç—…æ­·é¦–é ã€‚ `n, c:\temp\test.txt
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æŽ’ç‰ˆ
+    FileAppend,    `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
+    FileAppend, *¥»ªí³æ¶È¨Ì¾Ú³æ¦¸¼v¹³¶i¦æ¤À´Á¨Ñ¸~½F¹Î¶¤°Ñ¦Ò¡A¨Ã¤£¥Nªí¯f¤HªºÁ{§É¤À´Á¡AÁ{§É¤À´Á»Ýºî¦X¯f¤HªºÁ{§Éµo²{¡B¦UºØ¼v¹³(¥]¬A¦UºØ¤ºµøÃè¤Î¶W­µªiÀË¬d)¤Î¯f²zªí²{¨Ó¶i¦æ§PÂ_¡A¯f¤HªºÁ{§É¤À´Á½Ð°È¥²¨Ì¾Ú¸~½F¹Î¶¤·|Ä³°Q½×«áªºµ²ªG¡Aµn¸ü¦bÀù¯g¹Î¶¤·|Ä³¬ö¿ý³æ¤¤¡C `n, c:\temp\test.txt
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
     
-;--------------ç¬¬äºŒæ®µ-----------------------------------------------
+;--------------²Ä¤G¬q-----------------------------------------------
 FileAppend,  1. %1_Space%Tumor location`n , c:\temp\test.txt  
 FileAppend,  %4_Space%Location:( , c:\temp\test.txt  
 if TLS = 1
  {
-   FileAppend,  â–  Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  ¡½ Not assessable)  `n, c:\temp\test.txt
 }
   if TLS = 0
  {
-   FileAppend,  â–¡ Not assessable)  `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Not assessable)  `n, c:\temp\test.txt
 }
 if L1 = 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Cardia, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Cardia, c:\temp\test.txt
 }
   if L1 = 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Cardia, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Cardia, c:\temp\test.txt
 }
 if L2 = 1
  {
-   FileAppend,  %4_Space%â–  Fundus, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Fundus, c:\temp\test.txt
 }
   if L2 = 0
  {
-   FileAppend,  %4_Space%â–¡ Fundus, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Fundus, c:\temp\test.txt
 }
 if L3 = 1
  {
-   FileAppend,  %4_Space%â–  Antrum, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Antrum, c:\temp\test.txt
 }
   if L3 = 0
  {
-   FileAppend,  %4_Space%â–¡ Antrum, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Antrum, c:\temp\test.txt
 }
 if L4 = 1
  {
-   FileAppend,  %4_Space%â–  Pylorus, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Pylorus, c:\temp\test.txt
 }
   if L4 = 0
  {
-   FileAppend,  %4_Space%â–¡ Pylorus, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Pylorus, c:\temp\test.txt
 }
 if L5 = 1
  {
-   FileAppend,  %4_Space%â–  Other:_%L9%_`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Other:_%L9%_`n, c:\temp\test.txt
 }
   if L5 = 0
  {
-   FileAppend,  %4_Space%â–¡ Other:_%L9%_`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Other:_%L9%_`n, c:\temp\test.txt
 }
 if L6 = 1
  {
-   FileAppend,  %4_Space%%4_Space%â–  Body:, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡½ Body:, c:\temp\test.txt
 }
   if L6 = 0
  {
-   FileAppend,  %4_Space%%4_Space%â–¡ Body:, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%¡¼ Body:, c:\temp\test.txt
 }
 if L7 = 1
  {
-   FileAppend,  %2_Space%â–  Lesser/, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Lesser/, c:\temp\test.txt
 }
   if L7 = 0
  {
-   FileAppend,  %2_Space%â–¡ Lesser/, c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ Lesser/, c:\temp\test.txt
 }
 if L8 = 1
  {
-   FileAppend,  %2_Space%â–  Greater curvature`n, c:\temp\test.txt
+   FileAppend,  %2_Space%¡½ Greater curvature`n, c:\temp\test.txt
 }
   if L8 = 0
  {
-   FileAppend,  %2_Space%â–¡ Greater curvature`n, c:\temp\test.txt
+   FileAppend,  %2_Space%¡¼ Greater curvature`n, c:\temp\test.txt
 }
 
     FileAppend, %4_Space%Size: , c:\temp\test.txt
 
 if NonM = 1
  {
-   FileAppend,  %4_Space%â–  Non-measurable, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Non-measurable, c:\temp\test.txt
 }
   if NonM = 0
  {
-   FileAppend,  %4_Space%â–¡ Non-measurable, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Non-measurable, c:\temp\test.txt
 }
 
 if Meas = 1
  {
-   FileAppend,  %4_Space%â–  Measurable:_%Meas1%_cm (greatest diameter)`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Measurable:_%Meas1%_cm (greatest diameter)`n, c:\temp\test.txt
 }
   if Meas = 0
  {
-   FileAppend,  %4_Space%â–¡ Measurable:_%Meas1%_cm (greatest diameter)`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Measurable:_%Meas1%_cm (greatest diameter)`n, c:\temp\test.txt
 }
 
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æŽ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬ä¸‰æ®µ-----------------------------------------------
+;--------------²Ä¤T¬q-----------------------------------------------
 FileAppend,  2. %1_Space%Tumor invasion( , c:\temp\test.txt  
 
 if Nota= 1
  {
-   FileAppend,  â–  Not assessable) %1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡½ Not assessable) %1_Space% `n, c:\temp\test.txt
 }
   if Nota= 0
  {
-   FileAppend,  â–¡ Not assessable)%1_Space% `n, c:\temp\test.txt
+   FileAppend,  ¡¼ Not assessable)%1_Space% `n, c:\temp\test.txt
 }
 if T1= 1
  {
-   FileAppend,  %4_Space%â–  Gastric wall(T1-T2), c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Gastric wall(T1-T2), c:\temp\test.txt
 }
   if T1= 0
  {
-   FileAppend,  %4_Space%â–¡ Gastric wall(T1-T2), c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Gastric wall(T1-T2), c:\temp\test.txt
 }
 if T2= 1
  {
-   FileAppend,  %4_Space%â–  Perigastric tissue(T3-T4a)`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Perigastric tissue(T3-T4a)`n, c:\temp\test.txt
 }
   if T2= 0
  {
-   FileAppend,  %4_Space%â–¡ Perigastric tissue(T3-T4a)`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Perigastric tissue(T3-T4a)`n, c:\temp\test.txt
 }
 if T3= 1
  {
-   FileAppend,  %4_Space%â–  Adjacent organs or structures_%T5%_`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Adjacent organs or structures_%T5%_`n, c:\temp\test.txt
 }
   if T3= 0
  {
-   FileAppend,  %4_Space%â–¡ Adjacent organs or structures_%T5%_`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Adjacent organs or structures_%T5%_`n, c:\temp\test.txt
 }
 if T4= 1
  {
-   FileAppend,  %4_Space%â–  Others: _%T6%_`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ Others: _%T6%_`n, c:\temp\test.txt
 }
   if T4= 0
  {
-   FileAppend,  %4_Space%â–¡ Others: _%T6%_`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ Others: _%T6%_`n, c:\temp\test.txt
 }
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æŽ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬å››æ®µ-----------------------------------------------
+;--------------²Ä¥|¬q-----------------------------------------------
 
 FileAppend,  3. %1_Space%Regional node metastasis%2_Space%`n, c:\temp\test.txt  
 
 if No= 1
  {
-   FileAppend,  %4_Space%â–  No`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No`n, c:\temp\test.txt
 }
   if No= 0
  {
-   FileAppend,  %4_Space%â–¡ No`n, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No`n, c:\temp\test.txt
 }
 if Nequ= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Equivocal, %1_tab%Number: _%Ne1%_
+%4_Space%¡½ Equivocal, %1_tab%Number: _%Ne1%_
 )`n, c:\temp\test.txt
 }
   if Nequ= 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Equivocal, %1_tab%Number: _%Ne1%_
+%4_Space%¡¼ Equivocal, %1_tab%Number: _%Ne1%_
 )`n, c:\temp\test.txt
 }
    FileAppend,  %2_tab%Location: _%Ne2%_`n , c:\temp\test.txt
@@ -303,47 +304,43 @@ if Nyes= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Yes, %4_Space%%1_tab%Number: _%Ny1%_
-), c:\temp\test.txt
+%4_Space%¡½ Yes, %4_Space%%1_tab%Number: _%Ny1%_
+)`n, c:\temp\test.txt
 }
   if Nyes= 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Yes, %4_Space%%1_tab%Number: _%Ny1%_
-), c:\temp\test.txt
+%4_Space%¡¼ Yes, %4_Space%%1_tab%Number: _%Ny1%_
+)`n, c:\temp\test.txt
 }
-FileAppend,  
-(
- (N1:1-2;  N2:3-6;  N3a:7-15;  N3b:>15)
-)`n , c:\temp\test.txt
    FileAppend,  %2_tab%Location: _%Ny2%_`n , c:\temp\test.txt
-FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æŽ’ç‰ˆ
+FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 
-;--------------ç¬¬äº”æ®µ-----------------------------------------------
+;--------------²Ä¤­¬q-----------------------------------------------
 
    FileAppend,  4. %1_Space%Distant metastasis(in this study)`n, c:\temp\test.txt  
 if DM0= 1
  {
-   FileAppend,  %4_Space%â–  No %1_Space%, c:\temp\test.txt
+   FileAppend,  %4_Space%¡½ No %1_Space%, c:\temp\test.txt
 }
   if DM0 = 0
  {
-   FileAppend,  %4_Space%â–¡ No %1_Space%, c:\temp\test.txt
+   FileAppend,  %4_Space%¡¼ No %1_Space%, c:\temp\test.txt
 }
-    FileAppend,  `n, c:\temp\test.txt  ;è·³è¡Œ
+    FileAppend,  `n, c:\temp\test.txt  ;¸õ¦æ
 if DM1= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Equivocal, location: _%DM4%_`n
+%4_Space%¡½ Equivocal, location: _%DM4%_`n
 ), c:\temp\test.txt
 }
   if DM1 = 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Equivocal, location: _%DM4%_`n
+%4_Space%¡¼ Equivocal, location: _%DM4%_`n
 ), c:\temp\test.txt
 }
 
@@ -351,14 +348,14 @@ if DM2= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Non-regional lymph nodes, location: _%DM5%_`n
+%4_Space%¡½ Non-regional lymph nodes, location: _%DM5%_`n
 ), c:\temp\test.txt
 }
   if DM2 = 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Non-regional lymph nodes, location: _%DM5%_`n
+%4_Space%¡¼ Non-regional lymph nodes, location: _%DM5%_`n
 ), c:\temp\test.txt
 }
 
@@ -366,23 +363,23 @@ if DM3= 1
  {
    FileAppend,  
 (
-%4_Space%â–  Distant organ: _%DM6%_`n
+%4_Space%¡½ Distant organ: _%DM6%_`n
 ), c:\temp\test.txt
 }
   if DM3 = 0
  {
    FileAppend,  
 (
-%4_Space%â–¡ Distant organ: _%DM6%_`n
+%4_Space%¡¼ Distant organ: _%DM6%_`n
 ), c:\temp\test.txt
 }
-    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; è¼¸å…¥ç©ºç™½è¡Œå¹«åŠ©æŽ’ç‰ˆ
+    FileAppend,   %2_Space% `n, c:\temp\test.txt    ; ¿é¤JªÅ¥Õ¦æÀ°§U±Æª©
 ;-------------------------------------------------------------
     FileAppend,  5. %1_Space%Other findings: `n, c:\temp\test.txt 
     FileAppend,  %4_Space%_%OF0%_ `n, c:\temp\test.txt 
 ; ==================================
    FileRead, ClipboardContent, c:\temp\test.txt
-    ; å°‡å…§å®¹è¤‡è£½åˆ°å‰ªè²¼ç°¿
+    ; ±N¤º®e½Æ»s¨ì°Å¶KÃ¯
     Clipboard := ClipboardContent
     MsgBox, %Clipboard%
 return
