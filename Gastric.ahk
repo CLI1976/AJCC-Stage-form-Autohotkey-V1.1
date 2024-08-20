@@ -121,12 +121,12 @@ GenerateReport:
      ; 刪除現有的 test.txt 文件
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
-    FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; 輸入空白行幫助排版
-FileAppend,   =========================================== `n, c:\temp\test.txt   
+FormatTime, CurrentDate,, yyyy/MM/dd
+FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Gastric Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
-    FileAppend, *本表單僅依據單次影像進行分期供腫瘤團隊參考，並不代表病人的臨床分期，臨床分期需綜合病人的臨床發現、各種影像(包括各種內視鏡及超音波檢查)及病理表現來進行判斷，病人的臨床分期請務必依據腫瘤團隊會議討論後的結果，登載在癌症團隊會議紀錄單中。 `n, c:\temp\test.txt
+    FileAppend, *本表單僅依據單次影像進行分期供腫瘤團隊參考，並不代表病人的臨床分期，臨床分期需綜合病人臨床發現、各種影像(包括各種內視鏡及超音波檢查)及病理表現來進行判斷，病人的最終臨床分期可能因癌症團隊討論有所異動，敬請參閱病歷首頁。 `n, c:\temp\test.txt
     FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 ;-------------------------------------------------------------
     
@@ -305,15 +305,19 @@ if Nyes= 1
    FileAppend,  
 (
 %4_Space%■ Yes, %4_Space%%1_tab%Number: _%Ny1%_
-)`n, c:\temp\test.txt
+), c:\temp\test.txt
 }
   if Nyes= 0
  {
    FileAppend,  
 (
 %4_Space%□ Yes, %4_Space%%1_tab%Number: _%Ny1%_
-)`n, c:\temp\test.txt
+), c:\temp\test.txt
 }
+FileAppend,  
+(
+ (N1:1-2;  N2:3-6;  N3a:7-15;  N3b:>15)
+)`n , c:\temp\test.txt
    FileAppend,  %2_tab%Location: _%Ny2%_`n , c:\temp\test.txt
 FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 

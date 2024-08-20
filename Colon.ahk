@@ -125,11 +125,69 @@ return
 GenerateReport:
     ; Collect data from GUI
     Gui, Submit, NoHide
+
+; ===vvvvv 欄位簡易檢核vvvvv===
+   ; 檢查tumor location是否 全部未勾選
+    if ( TLS  != 1 and Cecum  != 1 and Ascending != 1  and Hepati != 1  and Transverse != 1 and Splenic != 1 and Descending != 1 and Sigmoid != 1 and Rectum != 1 and Other != 1)
+    {
+        MsgBox, T location未填
+    }
+    ; 檢查勾選但對應的location structure為空
+    if (Other= 1 and OtherL = "" )
+    {
+        MsgBox, Location structure未填
+    }
+
+   ; 檢查tumor location是否 全部未勾選
+    if ( NonM  != 1 and Measurable  != 1 )
+    {
+        MsgBox, Measure欄位未填
+    }
+    ; 檢查勾選但對應的location structure為空
+    if (Measurable = 1 and Measure = "" )
+    {
+        MsgBox, Measure size未填
+    }
+
+   ; 檢查tumor invasion是否全部未勾選
+    if ( Invasion0  != 1 and Invasion1  != 1 and Invasion2 != 1  and Invasion3 != 1  and Invasion4 != 1)
+    {
+        MsgBox, T stage有遺漏的欄位未填
+    }
+    ; 檢查勾選但對應的invasion structure為空
+    if (Invasion4= 1 and Invasion5 = "" )
+    {
+        MsgBox, invasion structure未填
+    }
+
+    ; 檢查vLN0, vLN1, vLN11是否全部未勾選
+    if ( LN0 != 1 and LN1 != 1 and LN11 != 1)
+    {
+        MsgBox, N stage有遺漏的欄位未填
+    }
+    ; 檢查vLN1或vLN11是否被勾選但對應的LN21或LN23為空
+    if ((LN1 = 1 and LN21 = "") or (LN11 = 1 and LN23 = "" ))
+    {
+        MsgBox, LN數目未填
+    }
+
+   ; 檢查Distent meta是否 全部未勾選
+    if ( DM0  != 1 and DM1  != 1 and DM2 != 1 )
+    {
+        MsgBox, Distent meta欄位未填
+    }
+    ; 檢查勾選但對應的Meta location為空
+  if ((DM1 = 1 and DM3 = "") or (DM2 = 1 and DM4 = "" ))
+    {
+        MsgBox, Meta location未填
+    }
+; === ^^^欄位簡易檢核^^^===
+
      ; 刪除現有的 test.txt 文件
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Colorectal Carcinoma (AJCC 8th) `n, c:\temp\test.txt  
 FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -524,7 +582,7 @@ if DM2= 1
     FileAppend,   %2_Space%`n, c:\temp\test.txt 
 ;-------------------------------------------------------------
     FileAppend,  5. %1_Space%Other findings: `n, c:\temp\test.txt 
-    FileAppend,  %4_Space%______ %vOF0%________ `n, c:\temp\test.txt 
+    FileAppend,  %4_Space%______ %OF0%________ `n, c:\temp\test.txt 
 ; ==================================
    FileRead, ClipboardContent, c:\temp\test.txt
     ; 將內容複製到剪貼簿

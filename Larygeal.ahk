@@ -206,7 +206,7 @@ Gui, Add, Edit, vDM4 y635 x792 w250
 
 
 ; Show GUI
-Gui, Show,  w1350 h880 x0 y0, Laryngeal Carcinoma Imaging Report Generator
+Gui, Show,  w1350 h880 x0 y0 , Laryngeal Carcinoma Imaging Report Generator
 return
 
 ; === 生成報告===

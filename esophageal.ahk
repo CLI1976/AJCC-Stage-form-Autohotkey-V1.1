@@ -133,7 +133,7 @@ GenerateReport:
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt   
     FileAppend, MCH Imaging Report for Esophgeal Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -197,14 +197,14 @@ if L6 = 1
  {
    FileAppend,  
 (
-%4_Space%■Measurable:   Length:_%L7%_ ;  Max thickness_%L8%_cm
+%4_Space%■Measurable:   Length:_%L7%_cm ;  Max thickness_%L8%_cm
 )`n, c:\temp\test.txt
 }
   if L6 = 0
  {
    FileAppend, 
 (
- %4_Space%□Measurable:   Length:_%L7%_ ;  Max thickness_%L8%_cm
+ %4_Space%□Measurable:   Length:_%L7%_cm ;  Max thickness_%L8%_cm
 )`n, c:\temp\test.txt
 }
 FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版

@@ -161,7 +161,7 @@ Gui, Add, Button, Default gGenerateReport y1050 x20, Generate Report
 Gui, Add, Button, gExit y1050 x170, Exit
 
 ; Show GUI
-Gui, Show, w600 h1100 x0 y0, Lung Cancer Imaging Report Generator
+Gui, Show, w600 h1100, Lung Cancer Imaging Report Generator
 return
 
 ; === 生成報告===
@@ -172,7 +172,7 @@ GenerateReport:
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging  on %CurrentDate%`n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Lung Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
