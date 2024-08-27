@@ -13,3 +13,6 @@
 
 感謝ChatGPT的幫忙
 2024/04
+
+Colon 跟 gastric cancer 表格新增檢核完成 
+2024/08
