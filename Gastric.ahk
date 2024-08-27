@@ -1,4 +1,5 @@
 ; Gastric cancer Imaging Report Generator
+; 20240/08/27加入欄位簡易檢核vvvvv===
 ; 以下變數用於在fileappend的開頭結束插入空白用的
 6_Space := "      "
 5_Space := "     "
@@ -121,6 +122,76 @@ GenerateReport:
      ; 刪除現有的 test.txt 文件
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
+
+
+; ===vvvvv 欄位簡易檢核vvvvv===
+ ; 檢查tumor location是否 全部未勾選
+    if ( TLS  != 1 and L1  != 1 and L2 != 1  and L3 != 1  and L4 != 1 and L5 != 1 and L6 != 1)
+    {
+        MsgBox, T location未填
+    }
+    ; 檢查勾選other 但對應的location structure為空
+    if (L5= 1 and L9 = "" )
+    {
+        MsgBox, Other Location 未填
+    }
+    ; 檢查勾選gastric body 但對應的location structure為空
+    if (L6= 1 and L8  != 1 and L7 != 1 )
+    {
+        MsgBox, Less or greater curvature side未填
+    }
+  ; 檢查tumor size是否 全部未勾選
+    if ( NonM  != 1 and Meas  != 1 )
+    {
+        MsgBox, Measure欄位未填
+    }
+    ; 檢查勾選Measurable 但對應的size欄位為空
+    if (Meas = 1 and Meas1 = "" )
+    {
+        MsgBox, Measure size未填
+    }
+; 檢查tumor invasion是否全部未勾選
+    if ( Nota  != 1 and T1  != 1 and T2 != 1  and T3 != 1  and T4 != 1)
+    {
+        MsgBox, Tumor invasion有遺漏的欄位未填
+    }
+   ; 檢查勾選但對應的invasion structure為空
+    if (T3= 1 and T5 = "" )
+    {
+        MsgBox, invasion structure未填
+    }
+   ; 檢查勾選但對應的invasion structure為空
+    if (T4= 1 and T6 = "" )
+    {
+        MsgBox, invasion structure未填
+    }
+    ; 檢查vLN0, vLN1, vLN11是否全部未勾選
+    if ( No != 1 and Nequ != 1 and Nyes != 1)
+    {
+        MsgBox, N stage有遺漏的欄位未填
+    }
+    ; 檢查LN Equivocal或Yes是否被勾選但對應的LN數目為空
+    if ((Nequ  = 1 and Ne1 = "") or (Nyes = 1 and Ny1 = "" ))
+    {
+        MsgBox, LN數目未填
+    }
+    ; 檢查LN Equivocal或Yes是否被勾選但對應的LN location為空
+    if ((Nequ  = 1 and Ne2 = "") or (Nyes = 1 and Ny2 = "" ))
+    {
+        MsgBox, LN location未填
+    }
+   ; 檢查Distent meta是否 全部未勾選
+    if ( DM0  != 1 and DM1  != 1 and DM2 != 1 and DM3 != 1 )
+    {
+        MsgBox, Distent meta欄位未填
+    }
+    ; 檢查勾選但對應的Meta location為空
+  if ((DM1 = 1 and DM4 = "") or (DM2 = 1 and DM5 = "" ) or (DM3 = 1 and DM6 = "" ))
+    {
+        MsgBox, Meta location未填
+    }
+; === ^^^欄位簡易檢核^^^===
+
 FormatTime, CurrentDate,, yyyy/MM/dd
 FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
