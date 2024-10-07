@@ -168,6 +168,91 @@ return
 GenerateReport:
     ; Collect data from GUI
     Gui, Submit, NoHide
+
+; ===vvvvv 欄位簡易檢核vvvvv===
+   ; 檢查tumor location是否 全部未勾選
+    if ( TLS !=1 and RUL  != 1 and RML  != 1 and RLL != 1  and LUL != 1  and LLL != 1 and Other != 1)
+    {
+        MsgBox, T location未填
+    }
+    ; 檢查勾選Other 但對應的location structure為空
+    if (Other= 1 and Other1 = "" )
+    {
+        MsgBox, Other Location structure未填
+    }
+   ; 檢查Measure欄位 是否 全部未勾選
+    if (  TLS  != 1 and NonM  != 1 and Meas1  != 1)
+    {
+        MsgBox, Measure欄位未填
+    }
+    ; 檢查勾選但對應的location structure為空
+    if (Meas1 = 1 and Meas = "" )
+    {
+        MsgBox, Measure size未填
+    }
+   ; 檢查tumor invasion是否全部未勾選
+    if ( NonM1  != 1 and NoE  != 1 and Yes != 1  )
+    {
+        MsgBox, T invasion Yes or No or Not assessable未填
+    }
+    ; 檢查對應的tumor size的欄位空
+    if (Yes = 1 and T1a != 1 and T1b != 1 and T1c != 1 and  T2a != 1 and T2b != 1 and T3a!= 1 and T4a != 1)
+    {
+        MsgBox, Invasion中tumor size的欄位完全沒有勾
+    }
+    ; 檢查對應的T3 invasion的欄位空
+    if (T3b = 1 and T3c != 1 and T3d != 1 and T3e != 1 and  T3f != 1)
+    {
+        MsgBox, T3 invasion的欄位缺
+    }
+    ; 檢查對應的T4 invasion的欄位空
+    if (T4b = 1 and T4c != 1 and T4d != 1 and T4e != 1 and  T4f != 1 and T4g != 1 and T4h != 1 and T4i != 1 and  T4j != 1 and  T4k != 1)
+    {
+        MsgBox, T4 invasion的欄位缺
+    }
+        ; 檢查LN Yes NO or equivocal是否全部未勾選
+    if ( No != 1 and Nequ != 1  and Nyes != 1)
+    {
+        MsgBox, N stage有遺漏的欄位未填
+    }
+    ; 檢查對應的LN location的欄位空
+    if (Nequ = 1 and Nip != 1 and Nih != 1 and Nipu != 1 and  Nsub != 1 and Nch != 1 and Ncm != 1 and Nsc != 1 and  Nis != 1)
+    {
+        MsgBox, equivocal LN location的欄位缺
+    }
+; 檢查對應的LN location的欄位空
+    if (Nyes = 1 and Nyip != 1 and Nyih != 1 and Nyipu != 1 and  Nysub != 1 and Nych != 1 and Nycm != 1 and Nysc != 1 and  Nyis != 1)
+    {
+        MsgBox, Yes LN location的欄位缺
+    }
+   ; 檢查Distent meta是否 全部未勾選
+    if ( DM0  != 1 and DM1  != 1 )
+    {
+        MsgBox, Distent meta欄位未填
+    }
+; 檢查對應的Distant meta的位置
+    if (DM1 = 1 and MT1 != 1 and MT2 != 1 and MT3 != 1 and  MT4 != 1 and ME1 != 1 and ME2 != 1 and ME3 != 1 and  ME4 != 1)
+    {
+        MsgBox, Distant meta的位置缺
+    }
+    ; 檢查勾選Distant meta但對應的location structure為空
+    if( ( ME1 = 1 and  ME5 = "" ) or( ME2 = 1 and  ME5 = "" ))
+    {
+        MsgBox, Distant meta的location未填
+    }
+    ; 檢查勾選Distant meta但對應的location structure為空
+    if( ( ME3 = 1 and  ME6 = "" ) or( ME4 = 1 and  ME6 = "" ))
+    {
+        MsgBox, Distant meta的location未填
+    }
+    ; 檢查勾選Distant meta但對應的location structure為空
+    if( ( ME1 = 1 and  ME2 = 1 ) or( ME3 = 1 and  ME4 = 1 ))
+    {
+        MsgBox, Distant meta是yes還是equivocal
+    }
+
+; === ^^^欄位簡易檢核^^^===
+
      ; 刪除現有的 test.txt 文件
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
