@@ -109,6 +109,72 @@ return
 GenerateReport:
     ; Collect data from GUI
     Gui, Submit, NoHide
+
+
+; ===vvvvv 欄位簡易檢核vvvvv===
+   ; 檢查tumor location是否 全部未勾選
+    if ( L1  != 1 and L2  != 1 and L3 != 1  and L4 != 1  and L5 != 1 and L6 != 1 and L7 != 1)
+    {
+        MsgBox, T location未填
+    }
+    ; 檢查勾選但對應的location structure為空
+    if (L7= 1 and L8 = "" )
+    {
+        MsgBox, Location structure未填
+    }
+
+   ; 檢查Measure欄位 是否 全部未勾選
+    if (  L1  != 1 and L2  != 1 and L9  != 1 and L10  != 1 )
+    {
+        MsgBox, Measure欄位未填
+    }
+    ; 檢查勾選但對應的location structure為空
+    if (L10 = 1 and L11 = "" )
+    {
+        MsgBox, Measure size未填
+    }
+    ; 檢查Number為空
+    if (L1 != 1 and L2  != 1 and L12 = "" )
+    {
+        MsgBox, Number未填
+    }
+   ; 檢查tumor invasion是否全部未勾選
+    if ( T1  != 1 and T2  != 1 and T3 != 1  and T4 != 1  and T5 != 1 and T6 != 1 )
+    {
+        MsgBox, Tumer invasion有遺漏的欄位未填
+    }
+        ; 檢查vLN0, vLN1, vLN11是否全部未勾選
+    if ( Not != 1 and No != 1  and E1 != 1 and Y1 != 1)
+    {
+        MsgBox, N stage有遺漏的欄位未填
+    }
+    ; 檢查對應的LN number為空
+    if ((E1 = 1 and E2 = "") or (Y1 = 1 and Y2 = "" ))
+    {
+        MsgBox, LN number未填
+    }
+; 檢查對應的LN location為空
+    if ((E1 = 1 and E3 = "") or (Y1 = 1 and Y3 = "" ))
+    {
+        MsgBox, LN Location未填
+    }
+
+   ; 檢查Distent meta是否 全部未勾選
+    if ( DM0  != 1 and DM1  != 1 )
+    {
+        MsgBox, Distent meta欄位未填
+    }
+    ; 檢查勾選但對應的Meta location為空
+  if (DM1 = 1 and DM2 = "") 
+    {
+        MsgBox, Meta location未填
+    }
+; === ^^^欄位簡易檢核^^^===
+
+
+
+
+
      ; 刪除現有的 test.txt 文件
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
