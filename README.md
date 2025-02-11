@@ -20,8 +20,10 @@
 >[!note]
 感謝ChatGPT的幫忙
 2024/04
+>[!note]
 Colon 跟 gastric cancer 表格新增檢核完成 
 2024/08
+>[!note]
 Lung.ahk 改為AJCC 9th版本並新增檢核 
 2025/02
 
