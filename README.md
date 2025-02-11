@@ -11,7 +11,7 @@
 ![這是示範圖](/pancreas01.jpg)
 
 純文字報告到剪貼簿，可以直接到報告欄位按ctrl+v
-# 腳本在Github中編碼可能會被改為UTF-8，
+:warning: 警告 腳本在Github中編碼可能會被改為UTF-8，
 # 下載後須手動修改為ANSI或Big-5
 
 感謝ChatGPT的幫忙
