@@ -79,7 +79,7 @@ Gui, Add, Checkbox, vT3d y400 x190, chest wall
 Gui, Add, Checkbox, vT3e y400 x275, phrenic nerve
 Gui, Add, Checkbox, vT3f y400 x380, parietal pericardium
 Gui, Add, Checkbox, vT3h y400 x520, azygos vein   ; 新增vT3h
-Gui, Add, Checkbox, vT3i y420 x60, Invades thoracic nerve roots (i.e. T1, T2) or stellate ganglion   ; 新增vT3i
+Gui, Add, Checkbox, vT3i y420 x60, Invades thoracic nerve roots (e.g. T1, T2) or stellate ganglion   ; 新增vT3i
 Gui, Add, Checkbox, vT3g y440 x60, Separate tumor nodule(s) in same lobe
 Gui, Add, Text, y460 x40, T4
 Gui, Add, Checkbox, vT4a y480 x60, Tumor >7cm
@@ -102,7 +102,7 @@ Gui, Add, Checkbox, vT4r y580 x220, vertebral body
 Gui, Add, Checkbox, vT4s y580 x330, lamina
 Gui, Add, Checkbox, vT4t y580 x395, spinal canal 
 Gui, Add, Checkbox, vT4u y600 x80, cervical nerve roots
-Gui, Add, Checkbox, vT4v y600 x220, brachial plexus (i.e., trunks, divisions, cords or terminal nerves)
+Gui, Add, Checkbox, vT4v y600 x220, brachial plexus (e.g., trunks, divisions, cords or terminal nerves)
 ; 新增vT4m-vT4v
 Gui, Add, Checkbox, vT4l y620 x60, Separate tumor nodule(s) in a different lobe of the ipsilateral lung
 
