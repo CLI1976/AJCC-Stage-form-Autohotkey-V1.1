@@ -14,6 +14,7 @@
 1_tab := "	"
 
 #NoEnv
+#SingleInstance Force
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
@@ -57,86 +58,92 @@ Gui, Add, Checkbox, vT9 y170 x240, Medial pterygoid
 Gui, Add, Checkbox, vT10 y190 x80, Lateral pterygoid
 Gui, Add, Checkbox, vT11 y190 x240, Prevertebral muscles
 Gui, Add, Checkbox, vT12 y210 x40, T3:
- Gui, Add, Checkbox, vT13 y210 x80, Skull base bone invasion
-Gui, Add, Checkbox, vT14 y210 x247, Cervical vertebral  
- Gui, Add, Checkbox, vT15 y210 x370, Pterygoid structure
-Gui, Add, Checkbox, vT16 y230 x80, Para-nasal sinus: (
-Gui, Add, Checkbox, vT17 y230 x220, Ethmoid sinus
-Gui, Add, Checkbox, vT18 y230 x340, Maxillary sinus 
-Gui, Add, Checkbox, vT19 y250 x220, Frontal sinus
-Gui, Add, Checkbox, vT20 y250 x340, Sphenoid sinus )
-Gui, Add, Checkbox, vT21 y270 x40, T4:
-Gui, Add, Checkbox, vT22 y270 x80, Intracranial
-Gui, Add, Checkbox, vT23 y270 x172, Cranial nerves
-Gui, Add, Checkbox, vT24 y270 x280, Hypopharynx
-Gui, Add, Checkbox, vT25 y270 x380, Orbit 
-Gui, Add, Checkbox, vT26 y270 x435, Parotid gland
-Gui, Add, Checkbox, vT27 y290 x80, Infiltration beyond the lateral surface of the lateral pterygoid muscle
-Gui, Add, Checkbox, vT28 y315 x80, Others: 
- Gui, Add, Edit, vT29 y310 x147 w200
+Gui, Add, Checkbox, vT13 y210 x80, Skull base bone invasion(including pterygoid structures)
+Gui, Add, Checkbox, vT14 y230 x80, Cervical vertebral  
+ Gui, Add, Checkbox, vT15 y230 x220, Pterygoid structure
+Gui, Add, Checkbox, vT16 y250 x80, Para-nasal sinus: (
+Gui, Add, Checkbox, vT17 y250 x220, Ethmoid sinus
+Gui, Add, Checkbox, vT18 y250 x340, Maxillary sinus 
+Gui, Add, Checkbox, vT19 y270 x220, Frontal sinus
+Gui, Add, Checkbox, vT20 y270 x340, Sphenoid sinus )
+Gui, Add, Checkbox, vT21 y290 x40, T4:
+Gui, Add, Checkbox, vT22 y290 x80, Intracranial
+Gui, Add, Checkbox, vT23 y290 x172, Unequivocal radiological and/or clinical involvement of cranial nerves
+Gui, Add, Checkbox, vT24 y310 x80, Hypopharynx
+Gui, Add, Checkbox, vT25 y310 x185, Orbit (including inferior orbital fissure) 
+Gui, Add, Checkbox, vT26 y310 x435, Parotid gland
+Gui, Add, Checkbox, vT27 y330 x80, Infiltration beyond the lateral surface of the lateral pterygoid muscle
+Gui, Add, Checkbox, vT28 y355 x80, Others: 
+Gui, Add, Edit, vT29 y350 x147 w200
 
 ; ---------------Regional nodal metastasis---------------
-  Gui, Font, s12 bold, Arial   ; 改大改粗體
-  Gui, Add, Text, y345 x20, 3. Regional nodal metastasis
-  Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
-  Gui, Font, s10, Arial   ; 恢復
- Gui, Add, Text, y345 x245, (
-  Gui, Add, Checkbox, vNot y345 x253, Not assessable)
- Gui, Add, Checkbox, vNo y365 x40, No regional nodal metastasis.
- Gui, Add, Checkbox, vYes y385 x40, Yes. If yes, involved lymph nodes:
- Gui, Add, Checkbox, vY1 y405 x60, N1: Unilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC.
- Gui, Add, Checkbox, vY2 y425 x60, N1: Uni-/Bi-lateral retropharyngeal LN(S), <= 6 cm in greatest dimension, above CBCC.
- Gui, Add, Checkbox, vY3 y445 x60, N2: Bilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC.
-Gui, Add, Checkbox, vY4 y465 x60, N3: Uni-/Bi-lateral cervical LN(S), > 6 cm in greatest dimension, and/or extension CBCC
-Gui, Add, Text, y485 x60,   *CBCC: Caudal border of cricoid cartilage.
-  Gui, Add, Text, y510 x60, Maximal size of the largest positive node: 
- Gui, Add, Edit, vY7 y505 x308 w60
-  Gui, Add, Text, y510 x369, mm (long axis)
-Gui, Add, Text, y530 x60, Location: Left level:
- Gui, Add, Checkbox, vY8 y530 x180, I
- Gui, Add, Checkbox, vY9 y530 x220, II
- Gui, Add, Checkbox, vY10 y530 x260, III
- Gui, Add, Checkbox, vY11 y530 x300, IV
- Gui, Add, Checkbox, vY12 y530 x340, V
- Gui, Add, Checkbox, vY13 y530 x380, VI
- Gui, Add, Checkbox, vY14 y530 x420, VII
-Gui, Add, Text, y550 x108, Right level:
- Gui, Add, Checkbox, vY15 y550 x180, I
- Gui, Add, Checkbox, vY16 y550 x220, II
- Gui, Add, Checkbox, vY17 y550 x260, III
- Gui, Add, Checkbox, vY18 y550 x300, IV
- Gui, Add, Checkbox, vY19 y550 x340, V
- Gui, Add, Checkbox, vY20 y550 x380, VI
- Gui, Add, Checkbox, vY21 y550 x420, VII
- Gui, Add, Text, y575 x108, Others: 
- Gui, Add, Edit, vY22 y570 x165 w200
+Gui, Font, s12 bold, Arial   ; 改大改粗體
+Gui, Add, Text, y385 x20, 3. Regional nodal metastasis
+Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
+Gui, Font, s10, Arial   ; 恢復
+Gui, Add, Text, y385 x245, (
+Gui, Add, Checkbox, vNot y385 x253, Not assessable)
+Gui, Add, Checkbox, vNo y405 x40, No tumor involvement of regional nodal metastasis.
+Gui, Add, Checkbox, vYes y425 x40, Yes. If yes, involved lymph nodes:
+Gui, Add, Checkbox, vY1 y445 x60, N1: Unilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
+Gui, Add, Checkbox, vY2 y465 x60, N1: Uni-/Bi-lateral retropharyngeal LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
+Gui, Add, Checkbox, vY3 y485 x60, N2: Bilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
+Gui, Add, Checkbox, vY4 y505 x60, N3: Uni-/Bi-lateral cervical LN(S), > 6 cm in greatest dimension, and/or extension CBCC
+Gui, Add, Checkbox, vY23 y525 x60, N3: ENE(+) with involvement of adjacent muscles, skin, and/or neurovascular bundle.
+; =++add vY23
+Gui, Add, Text, y545 x60,   *CBCC: Caudal border of cricoid cartilage.
+Gui, Add, Text, y545 x340,   *ENE (+): advanced extranodal extension
+  Gui, Add, Text, y570 x60, Maximal size of the largest positive node: 
+ Gui, Add, Edit, vY7 y565 x308 w60
+  Gui, Add, Text, y570 x369, mm (long axis)
+Gui, Add, Text, y590 x60, Location: Left level:
+ Gui, Add, Checkbox, vY8 y590 x180, I
+ Gui, Add, Checkbox, vY9 y590 x220, II
+ Gui, Add, Checkbox, vY10 y590 x260, III
+ Gui, Add, Checkbox, vY11 y590 x300, IV
+ Gui, Add, Checkbox, vY12 y590 x340, V
+ Gui, Add, Checkbox, vY13 y590 x380, VI
+ Gui, Add, Checkbox, vY14 y590 x420, VII
+Gui, Add, Text, y610 x108, Right level:
+ Gui, Add, Checkbox, vY15 y610 x180, I
+ Gui, Add, Checkbox, vY16 y610 x220, II
+ Gui, Add, Checkbox, vY17 y610 x260, III
+ Gui, Add, Checkbox, vY18 y610 x300, IV
+ Gui, Add, Checkbox, vY19 y610 x340, V
+ Gui, Add, Checkbox, vY20 y610 x380, VI
+ Gui, Add, Checkbox, vY21 y610 x420, VII
+ Gui, Add, Text, y635 x108, Others: 
+ Gui, Add, Edit, vY22 y630 x165 w200
 
 ; ---------------Distant Metastasis---------------
    Gui, Font, s12 bold, Arial   ; 改大改粗體
-  Gui, Add, Text, y605 x20, 4. Distant metastasis
+  Gui, Add, Text, y665 x20, 4. Distant metastasis
   Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
   Gui, Font, s10, Arial   ; 恢復
-  Gui, Add, Text, y605 x165, (in this study)
-  Gui, Add, Checkbox, vDM0 y625 x40, No
- Gui, Add, Checkbox, vDM1 y650 x40, Equivocal, location: 
- Gui, Add, Edit, vDM2 y645 x174 w250
- Gui, Add, Checkbox, vDM3 y675 x40, Yes, location:
-Gui, Add, Edit, vDM4 y670 x142 w250
- 
+  Gui, Add, Text, y665 x165, (in this study)
+  Gui, Add, Checkbox, vDM0 y685 x40, No
+ Gui, Add, Checkbox, vDM1 y710 x40, Equivocal, location: 
+ Gui, Add, Edit, vDM2 y705 x174 w250
+ Gui, Add, Checkbox, vDM3 y735 x40, Yes, location:
+Gui, Add, Edit, vDM4 y730 x142 w250
+; =++add vDM5 vDM6
+Gui, Add, Checkbox, vDM5 y755 x60, M1a: <= 3 metastatic lesions in one or more organs/ sites.
+Gui, Add, Checkbox, vDM6 y775 x60, M1b: > 3 metastatic lesions in one or more organs/ sites.
+
 ; ---------------Other Findings---------------
  Gui, Font, s12 bold, Arial   ; 改大改粗體
- Gui, Add, Text, y705 x20, 5. Other findings
+ Gui, Add, Text, y805 x20, 5. Other findings
  Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
  Gui, Font, s10, Arial   ; 恢復
- Gui, Add, Edit, vOF0 y725 x40 w500
+ Gui, Add, Edit, vOF0 y825 x40 w500
 
 ; Buttons
  Gui, Font, s12 bold, Arial   ; 改大改粗體
- Gui, Add, Button, Default gGenerateReport y770 x20, Generate Report
- Gui, Add, Button, gExit y770 x170, Exit
+ Gui, Add, Button, Default gGenerateReport y870 x20, Generate Report
+ Gui, Add, Button, gExit y870 x170, Exit
 
 ; Show GUI
-Gui, Show,  w615 h820, Nasopharyngeal Carcinoma Imaging Report Generator
+Gui, Show,  w675 h920, Nasopharyngeal Carcinoma Imaging Report Generator
 return
 
 ; === 生成報告===
@@ -149,7 +156,7 @@ GenerateReport:
 FormatTime, CurrentDate,, yyyy/MM/dd
 FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
-    FileAppend, MCH Imaging Report for Nasopharyngeal Carcinoma (AJCC 8th)`n, c:\temp\test.txt
+    FileAppend, MCH Imaging Report for Nasopharyngeal Carcinoma (AJCC 9th)`n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
     FileAppend, 本表單僅依據單次影像進行分期供腫瘤團隊參考，並不代表病人的臨床分期，臨床分期需綜合病人臨床發現、各種影像(包括各種內視鏡及超音波檢查)及病理表現來進行判斷，病人的最終臨床分期可能因癌症團隊討論有所異動，敬請參閱病歷首頁。 `n, c:\temp\test.txt
     FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -317,19 +324,19 @@ if T12= 1
 }
 if T13= 1
  {
-   FileAppend,  %2_Space%■ Skull base bone invasion , c:\temp\test.txt
+   FileAppend,  %2_Space%■ Skull base bone invasion(including pterygoid structures)`n , c:\temp\test.txt
 }
   if T13= 0
  {
-   FileAppend,  %2_Space%□ Skull base bone invasion , c:\temp\test.txt
+   FileAppend,  %2_Space%□ Skull base bone invasion(including pterygoid structures)`n , c:\temp\test.txt
 }
 if T14= 1
  {
-   FileAppend, %2_Space%■ Cervical vertebral  , c:\temp\test.txt
+   FileAppend, %4_Space%%4_Space%%4_Space%%2_Space%■ Cervical vertebral  , c:\temp\test.txt
 }
   if T14= 0
  {
-   FileAppend,  %2_Space%□ Cervical vertebral  , c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%2_Space%□ Cervical vertebral  , c:\temp\test.txt
 }
 if T15= 1
  {
@@ -397,27 +404,27 @@ if T22= 1
 }
 if T23= 1
  {
-   FileAppend,  %2_Space%■ Cranial nerves, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Unequivocal radiological and/or clinical involvement of cranial nerves`n, c:\temp\test.txt
 }
   if T23= 0
  {
-   FileAppend,  %2_Space%□ Cranial nerves, c:\temp\test.txt
+   FileAppend,  %2_Space%□ Unequivocal radiological and/or clinical involvement of cranial nerves`n, c:\temp\test.txt
 }
 if T24= 1
  {
-   FileAppend,  %2_Space%■ Hypopharynx, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%2_Space%■ Hypopharynx, c:\temp\test.txt
 }
   if T24= 0
  {
-   FileAppend,  %2_Space%□ Hypopharynx, c:\temp\test.txt
+   FileAppend,  %4_Space%%4_Space%%4_Space%%2_Space%□ Hypopharynx, c:\temp\test.txt
 }
 if T25= 1
  {
-   FileAppend,  %2_Space%■ Orbit , c:\temp\test.txt
+   FileAppend,  %2_Space%■ Orbit (including inferior orbital fissure) , c:\temp\test.txt
 }
   if T25= 0
  {
-   FileAppend,  %2_Space%□ Orbit , c:\temp\test.txt
+   FileAppend,  %2_Space%□ Orbit (including inferior orbital fissure) , c:\temp\test.txt
 }
 if T26= 1
  {
@@ -458,11 +465,11 @@ if Not= 1
 }
 if No= 1
  {
-   FileAppend,  %4_Space%■ No regional nodal metastasis. `n, c:\temp\test.txt
+   FileAppend,  %4_Space%■ No tumor involvement of regional nodal metastasis. `n, c:\temp\test.txt
 }
   if No= 0
  {
-   FileAppend,  %4_Space%□ No regional nodal metastasis. `n, c:\temp\test.txt
+   FileAppend,  %4_Space%□ No tumor involvement of regional nodal metastasis. `n, c:\temp\test.txt
 }
 if Yes= 1
  {
@@ -482,42 +489,42 @@ if Y1= 1
  {
    FileAppend,  
 (
-%4_Space%%4_Space%■ N1: Unilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC.
+%4_Space%%4_Space%■ N1: Unilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
 )`n , c:\temp\test.txt
 }
   if Y1= 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%□ N1: Unilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC.
+%4_Space%%4_Space%□ N1: Unilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
 )`n, c:\temp\test.txt
 }
 if Y2= 1
  {
    FileAppend,  
 (
-%4_Space%%4_Space%■ N1: Uni-/Bi-lateral retropharyngeal LN(S), <= 6 cm in greatest dimension, above CBCC.
+%4_Space%%4_Space%■ N1: Uni-/Bi-lateral retropharyngeal LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
 )`n, c:\temp\test.txt
 }
   if Y2= 0
  {
    FileAppend,
 (
-%4_Space%%4_Space%□ N1: Uni-/Bi-lateral retropharyngeal LN(S), <= 6 cm in greatest dimension, above CBCC.
+%4_Space%%4_Space%□ N1: Uni-/Bi-lateral retropharyngeal LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
 )`n , c:\temp\test.txt
 }
 if Y3= 1
  {
    FileAppend,  
 (
-%4_Space%%4_Space%■ N2: Bilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC. 
+%4_Space%%4_Space%■ N2: Bilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
 )`n, c:\temp\test.txt
 }
   if Y3= 0
  {
    FileAppend,  
 (
-%4_Space%%4_Space%□ N2: Bilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC.
+%4_Space%%4_Space%□ N2: Bilateral cervical LN(S), <= 6 cm in greatest dimension, above CBCC, No ENE (+).
 )`n, c:\temp\test.txt
 }
 if Y4= 1
@@ -534,9 +541,27 @@ if Y4= 1
 %4_Space%%4_Space%□ N3: Uni-/Bi-lateral cervical LN(S), > 6 cm in greatest dimension, and/or extension CBCC
 )`n, c:\temp\test.txt
 }
+
+if Y23= 1
+  {
+    FileAppend,  
+ (
+ %4_Space%%4_Space%■ N3: N3: ENE(+) with involvement of adjacent muscles, skin, and/or neurovascular bundle.
+ )`n, c:\temp\test.txt
+ }
+   if Y23= 0
+  {
+    FileAppend,  
+ (
+ %4_Space%%4_Space%□ N3: ENE(+) with involvement of adjacent muscles, skin, and/or neurovascular bundle.
+ )`n, c:\temp\test.txt
+ }
+
+
+
 FileAppend,  
 (
-%4_Space%%4_Space%*CBCC: Caudal border of cricoid cartilage.
+%4_Space%%4_Space%*CBCC: Caudal border of cricoid cartilage. `n%4_Space%%4_Space% *ENE (+): advanced extranodal extension
 )`n, c:\temp\test.txt
 FileAppend,  %4_Space%%4_Space%Maximal size of the largest positive node: __%Y7%__ mm (long axis)`n , c:\temp\test.txt
 FileAppend,  %4_Space%%4_Space%Location: Left level:  , c:\temp\test.txt
@@ -703,6 +728,34 @@ if DM3= 1
 )`n, c:\temp\test.txt
 }
 
+if DM5= 1
+  {
+    FileAppend,  
+ (
+ %4_Space%%4_Space%■ M1a: <= 3 metastatic lesions in one or more organs/ sites.
+ )`n, c:\temp\test.txt
+ }
+   if DM5 = 0
+  {
+    FileAppend,  
+ (
+ %4_Space%%4_Space%□ M1a: <= 3 metastatic lesions in one or more organs/ sites.
+ )`n, c:\temp\test.txt
+}
+ if DM6= 1
+  {
+    FileAppend,  
+ (
+ %4_Space%%4_Space%■ M1b: > 3 metastatic lesions in one or more organs/ sites.
+ )`n, c:\temp\test.txt
+ }
+   if DM6 = 0
+  {
+    FileAppend,  
+ (
+ %4_Space%%4_Space%□ M1b: > 3 metastatic lesions in one or more organs/ sites.
+ )`n, c:\temp\test.txt
+}
 
     FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 ;-------------------------------------------------------------
