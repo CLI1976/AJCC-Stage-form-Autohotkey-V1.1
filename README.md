@@ -24,6 +24,8 @@
 >
 >2025/02 Lung.ahk 改為AJCC 9th版本並新增檢核
 >
+>2025/02 Nasopharyngeal.ahk 改為AJCC 9th版本
+>
 
 If you wish to support me in this and other projects:
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/hw98188d)
