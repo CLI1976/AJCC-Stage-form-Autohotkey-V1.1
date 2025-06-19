@@ -28,7 +28,7 @@ Gui, Font ; 重置字體設置(不加這個 粗體改不回來)
 Gui, Font, s10, Arial   ; 恢復
 Gui, Add, Text, y15 x131, (
 Gui, Add, Checkbox, vL1 y15 x136, Tx: Not assessable)
-Gui, Add, Checkbox, vL2 y40 x40, Non-measureable
+Gui, Add, Checkbox, vL2 y40 x40, Non-measurable
 Gui, Add, Checkbox, vL3 y40 x166, Measurable: 
 Gui, Add, Edit, vL4 y35 x262 w40
 Gui, Add, Text, y40 x308, cm (length or largest diameter)
@@ -119,7 +119,7 @@ GenerateReport:
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,  Additional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Cervical Carcinoma (AJCC 9th) `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -139,11 +139,11 @@ if L1 = 1
 }
 if L2 = 1
  {
-   FileAppend,  %4_Space%■ Non-measureable, c:\temp\test.txt
+   FileAppend,  %4_Space%■ Non-measurable, c:\temp\test.txt
 }
   if L2 = 0
  {
-   FileAppend,  %4_Space%□ Non-measureable, c:\temp\test.txt
+   FileAppend,  %4_Space%□ Non-measurable, c:\temp\test.txt
 }
 if L3 = 1
  {
