@@ -35,7 +35,7 @@ Gui, Add, Checkbox, vL4 y60 x155, Left
 Gui, Add, Checkbox, vL5 y60 x207, Bilateral 
 Gui, Add, Checkbox, vL6 y60 x283, Difficult to determine
 Gui, Add, Text, y85 x40, Size: 
-Gui, Add, Checkbox, vL7 y85 x76, Non-measureable
+Gui, Add, Checkbox, vL7 y85 x76, Non-measurable
 Gui, Add, Checkbox, vL8 y85 x204, Measurable: 
 Gui, Add, Edit, vL9 y80 x300 w40
 Gui, Add, Text, y85 x343, cm (length or largest diameter)
@@ -148,7 +148,7 @@ GenerateReport:
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,  Additional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Ovarian Cancer (AJCC 8th) `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -211,11 +211,11 @@ if L6 = 1
 FileAppend,  %4_Space%Size: , c:\temp\test.txt
 if L7 = 1
  {
-   FileAppend,  %2_Space%■ Non-measureable, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Non-measurable, c:\temp\test.txt
 }
   if L7 = 0
  {
-   FileAppend,  %2_Space%□ Non-measureable,  c:\temp\test.txt
+   FileAppend,  %2_Space%□ Non-measurable,  c:\temp\test.txt
 }
 if L8 = 1
  {

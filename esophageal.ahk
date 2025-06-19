@@ -33,8 +33,8 @@ Gui, Font, s10, Arial   ; 恢復
 Gui, Add, Text, y15 x157, (
 Gui, Add, Checkbox, vTLS y15 x165, Not assessable)
 Gui, Add, Text, y35 x40, Location:
-Gui, Add, Checkbox, vL1 y55 x40, Cervical segement( hypopharynx to sternal notch)
-Gui, Add, Checkbox, vL2 y75 x40, Upper third of thoracic segment(Stenernal nodth to azygos vein)
+Gui, Add, Checkbox, vL1 y55 x40, Cervical segment( hypopharynx to sternal notch)
+Gui, Add, Checkbox, vL2 y75 x40, Upper third of thoracic segment(Sternal notch to azygos vein)
 Gui, Add, Checkbox, vL3 y95 x40, Middle third of thoracic segment(Azygos vein to inferior pulmonary vein)
 Gui, Add, Checkbox, vL4 y115 x40, Lower third of thoracic segment(inferior pulmonary vein to esophagogastric junction)
 Gui, Add, Text, y140 x40, Size: 
@@ -133,9 +133,9 @@ GenerateReport:
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,  Additional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt   
-    FileAppend, MCH Imaging Report for Esophgeal Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
+    FileAppend, MCH Imaging Report for Esophageal Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
     FileAppend, **本表單僅依據單次影像進行分期供腫瘤團隊參考，並不代表病人的臨床分期，臨床分期需綜合病人臨床發現、各種影像(包括各種內視鏡及超音波檢查)及病理表現來進行判斷，病人的最終臨床分期可能因癌症團隊討論有所異動，敬請參閱病歷首頁。  `n, c:\temp\test.txt
     FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -154,19 +154,19 @@ if TLS = 1
    FileAppend, %4_Space%Location: `n, c:\temp\test.txt
 if L1 = 1
  {
-   FileAppend,  %4_Space%■ Cervical segement( hypopharynx to sternal notch) `n, c:\temp\test.txt
+   FileAppend,  %4_Space%■ Cervical segment( hypopharynx to sternal notch) `n, c:\temp\test.txt
 }
   if L1 = 0
  {
-   FileAppend,  %4_Space%□ Cervical segement( hypopharynx to sternal notch) `n, c:\temp\test.txt
+   FileAppend,  %4_Space%□ Cervical segment( hypopharynx to sternal notch) `n, c:\temp\test.txt
 }
 if L2 = 1
  {
-   FileAppend,  %4_Space%■ Upper third of thoracic segment(Stenernal nodth to azygos vein) `n, c:\temp\test.txt
+   FileAppend,  %4_Space%■ Upper third of thoracic segment(Sternal notch to azygos vein) `n, c:\temp\test.txt
 }
   if L2 = 0
  {
-   FileAppend,  %4_Space%□ Upper third of thoracic segment(Stenernal nodth to azygos vein)`n,  c:\temp\test.txt
+   FileAppend,  %4_Space%□ Upper third of thoracic segment(Sternal notch to azygos vein)`n,  c:\temp\test.txt
 }
 if L3 = 1
  {
@@ -340,14 +340,14 @@ if Yes= 1
  {
    FileAppend,  
 (
-%4_Space%■ Yes. if yes: Numer of suspicious lymph node:_%N1%_(N1: 1-2; N2: 3-6; N3: 7 or more)
+%4_Space%■ Yes. if yes: Number of suspicious lymph node:_%N1%_(N1: 1-2; N2: 3-6; N3: 7 or more)
 )`n, c:\temp\test.txt
 }
   if Yes= 0
  {
    FileAppend,  
 (
-%4_Space%□ Yes. if yes: Numer of suspicious lymph node:_%N1%_(N1: 1-2; N2: 3-6; N3: 7 or more)
+%4_Space%□ Yes. if yes: Number of suspicious lymph node:_%N1%_(N1: 1-2; N2: 3-6; N3: 7 or more)
 )`n, c:\temp\test.txt
 }
    FileAppend,  %4_Space%%4_Space%Location:`n , c:\temp\test.txt

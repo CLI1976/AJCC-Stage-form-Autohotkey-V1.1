@@ -44,7 +44,7 @@ Gui, Add, Checkbox, vT3 y130 x40, Yes. If yes:
 Gui, Add, Checkbox, vT4 y150 x60, Tumor in uterine corpus
 Gui, Add, Checkbox, vT5 y170 x80, Tumor limited to endometrium or invades less than one half of the myometrium (T1a)
 Gui, Add, Checkbox, vT6 y190 x80, Tumor invades more than one half of the myometrium (T1b)
-Gui, Add, Checkbox, vT7 y210 x60, Tumor invades stromal connective tissue of the cervix but does not extend beyound uterus (T2)
+Gui, Add, Checkbox, vT7 y210 x60, Tumor invades stromal connective tissue of the cervix but does not extend beyond uterus (T2)
 Gui, Add, Checkbox, vT8 y230 x60, Tumor invades serosa and/or adnexa (T3a)
 Gui, Add, Checkbox, vT9 y250 x60, Vaginal involvement (T3b)
 Gui, Add, Checkbox, vT10 y270 x60, Tumor invades bladder (T4)
@@ -108,7 +108,7 @@ GenerateReport:
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    
+FileAppend,  Additional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Endometrial Carcinoma (AJCC 8th)  `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -197,11 +197,11 @@ if T6= 1
 }
 if T7= 1
  {
-   FileAppend,   %4_Space%%4_Space%■ Tumor invades stromal connective tissue of the cervix but does not extend beyound uterus (T2) `n, c:\temp\test.txt
+   FileAppend,   %4_Space%%4_Space%■ Tumor invades stromal connective tissue of the cervix but does not extend beyond uterus (T2) `n, c:\temp\test.txt
 }
   if T7= 0
  {
-   FileAppend,   %4_Space%%4_Space%□ Tumor invades stromal connective tissue of the cervix but does not extend beyound uterus (T2) `n, c:\temp\test.txt
+   FileAppend,   %4_Space%%4_Space%□ Tumor invades stromal connective tissue of the cervix but does not extend beyond uterus (T2) `n, c:\temp\test.txt
 }
 if T8= 1
  {
