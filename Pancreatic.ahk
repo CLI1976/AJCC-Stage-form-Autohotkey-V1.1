@@ -36,7 +36,7 @@ Gui, Add, Checkbox, vL5 y120 x60, Pancreatic tail
 Gui, Add, Checkbox, vL6 y145 x60, Others: 
 Gui, Add, Edit, vL7 y140 x127 w160
 Gui, Add, Text, y170 x40, Size: 
-Gui, Add, Checkbox, vL8 y170 x76, Non-measureable
+Gui, Add, Checkbox, vL8 y170 x76, Non-measurable
 Gui, Add, Checkbox, vL9 y170 x204, Measurable: 
 Gui, Add, Edit, vL10 y165 x300 w40
 Gui, Add, Text, y170 x343, cm (greatest diameter)
@@ -55,12 +55,12 @@ Gui, Add, Text, y170 x343, cm (greatest diameter)
  Gui, Add, Checkbox, vT6 y300 x60, T1c: Tumor 1 cm to 2 cm
  Gui, Add, Checkbox, vT7 y320 x60, T2: Tumor > 2cm but <= 4 cm
  Gui, Add, Checkbox, vT8 y340 x60, T3: Tumor > 4 cm
- Gui, Add, Checkbox, vT9 y360 x40, T4: Tumor invasion beyond pancreas
+ Gui, Add, Checkbox, vT9 y360 x40, T4: Tumor unresectable due to involvement of these major arteries.
  Gui, Add, Checkbox, vT10 y380 x60, Celiac trunk
  Gui, Add, Checkbox, vT11 y380 x156, Superior mesenteric artery(SMA)
  Gui, Add, Checkbox, vT12 y380 x370, Common hepatic artery
- Gui, Add, Checkbox, vT13 y405 x60, Adjacent organs:
- Gui, Add, Edit, vT14 y400 x183 w250
+ Gui, Add, Checkbox, vT13 y405 x40, Adjacent organs(Not by itself constitute T4) :
+ Gui, Add, Edit, vT14 y400 x320 w230
 
 ; ---------------Regional nodal metastasis---------------
  Gui, Font, s12 bold, Arial   ; 改大改粗體
@@ -116,7 +116,7 @@ GenerateReport:
     FileDelete, c:\temp\test.txt
     ; 將結果逐行輸入test.txt中
 FormatTime, CurrentDate,, yyyy/MM/dd
-FileAppend,  Addtional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
+FileAppend,  Additional report for cancer staging on %CurrentDate%  `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 FileAppend,   =========================================== `n, c:\temp\test.txt 
     FileAppend, MCH Imaging Report for Pancreatic Carcinoma (AJCC 8th) `n, c:\temp\test.txt
     FileAppend,    `n, c:\temp\test.txt    ; 輸入空白行幫助排版
@@ -178,11 +178,11 @@ if L6 = 1
 FileAppend,  %4_Space%Size: , c:\temp\test.txt
 if L8 = 1
  {
-   FileAppend,  %2_Space%■ Non-measureable, c:\temp\test.txt
+   FileAppend,  %2_Space%■ Non-measurable, c:\temp\test.txt
 }
   if L8 = 0
  {
-   FileAppend,  %2_Space%□ Non-measureable,  c:\temp\test.txt
+   FileAppend,  %2_Space%□ Non-measurable,  c:\temp\test.txt
 }
 if L9 = 1
  {
@@ -288,11 +288,11 @@ if T8= 1
 }
 if T9= 1
  {
-   FileAppend,  %4_Space%■ T4: Tumor invasion beyond pancreas `n, c:\temp\test.txt
+   FileAppend,  %4_Space%■ T4: Tumor unresectable due to involvement of these major arteries. `n, c:\temp\test.txt
 }
   if T9= 0
  {
-   FileAppend,  %4_Space%□ T4: Tumor invasion beyond pancreas `n, c:\temp\test.txt
+   FileAppend,  %4_Space%□ T4: Tumor unresectable due to involvement of these major arteries. `n, c:\temp\test.txt
 }
 if T10= 1
  {
@@ -320,11 +320,11 @@ FileAppend,  %2_Space%□ Common hepatic artery`n, c:\temp\test.txt
 }
 if T13= 1
  {
-   FileAppend,  %4_Space%%4_Space%■ Adjacent organs: __%T14%__`n , c:\temp\test.txt
+   FileAppend,  %4_Space%■ Adjacent organs(Not by itself constitute T4): __%T14%__`n , c:\temp\test.txt
 }
   if T13= 0
  {   
-FileAppend,  %4_Space%%4_Space%□ Adjacent organs: __%T14%__`n, c:\temp\test.txt
+FileAppend,  %4_Space%□ Adjacent organs(Not by itself constitute T4): __%T14%__`n, c:\temp\test.txt
 }
 FileAppend,   %2_Space% `n, c:\temp\test.txt    ; 輸入空白行幫助排版
 
