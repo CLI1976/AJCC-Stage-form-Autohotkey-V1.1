@@ -26,6 +26,7 @@
 >
 >2025/02 Nasopharyngeal.ahk 改為AJCC 9th版本
 >
-
+>2025/06 修改pancreatic ca表單T4會有誤導的問題(organ invasion不算T4)
+>
 If you wish to support me in this and other projects:
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/hw98188d)
